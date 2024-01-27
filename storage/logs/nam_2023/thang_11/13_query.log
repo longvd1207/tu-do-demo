@@ -1,0 +1,1416 @@
+[2023-11-13 10:57:16]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-13 10:57:22]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-13 10:57:22]
+select top 1 * from [user] where [user_name] = ? and [is_delete] = ? and [user].[deleted_at] is null [admin, 0]
+
+[2023-11-13 10:57:22]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:22]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-13 10:57:22]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:22]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:57:22]
+select * from [tbl_staff] where [is_delete] = ? [0]
+
+[2023-11-13 10:57:22]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [start_date] >= ? and [end_date] <= ? and [id] = ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:57:23]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [eat_date] >= ? and [eat_date] <= ? and exists (select * from [tbl_staff] where [tbl_register_eat_detail].[staff_id] = [tbl_staff].[id] and [company_id] in (?, ?, ?, ?)) and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:23]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:57:23]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:57:23]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:57:23]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:23]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:23]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [d769115bbcb3f7ce810cab9dbdeceb998f7979711fd58179f0924950e140147776ff8e3425fb658d, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:57:23.821, 2023-11-13 10:57:23.821, 2024-11-13 10:57:23.821]
+
+[2023-11-13 10:57:23]
+select top 1 * from [oauth_access_tokens] where [id] = ? [d769115bbcb3f7ce810cab9dbdeceb998f7979711fd58179f0924950e140147776ff8e3425fb658d]
+
+[2023-11-13 10:57:24]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:57:23.998, d769115bbcb3f7ce810cab9dbdeceb998f7979711fd58179f0924950e140147776ff8e3425fb658d]
+
+[2023-11-13 10:57:24]
+select * from [permissions] []
+
+[2023-11-13 10:57:24]
+select [roles].*, [role_has_permissions].[permission_id] as [pivot_permission_id], [role_has_permissions].[role_id] as [pivot_role_id] from [roles] inner join [role_has_permissions] on [roles].[id] = [role_has_permissions].[role_id] where [role_has_permissions].[permission_id] in (507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548) []
+
+[2023-11-13 10:57:24]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:24]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:24]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:24]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:24]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [start_date] >= ? and [end_date] <= ? and [id] = ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:57:24]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:24]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [eat_date] >= ? and [eat_date] <= ? and [is_use] = ? and exists (select * from [tbl_staff] where [tbl_register_eat_detail].[staff_id] = [tbl_staff].[id] and [company_id] in (?, ?, ?, ?)) and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 1, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:24]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [start_date] >= ? and [end_date] <= ? and [id] = ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:57:31]
+select * from [tbl_menu] where [is_delete] = ? and [tbl_menu].[deleted_at] is null [0]
+
+[2023-11-13 10:57:31]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:31]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:31]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:31]
+select count(*) as aggregate from [tbl_meal] where [is_delete] = ? and [tbl_meal].[deleted_at] is null [0]
+
+[2023-11-13 10:57:31]
+select top 20 * from [tbl_meal] where [is_delete] = ? and [tbl_meal].[deleted_at] is null [0]
+
+[2023-11-13 10:57:31]
+select * from [tbl_eat] where [is_delete] = ? and [tbl_eat].[deleted_at] is null [0]
+
+[2023-11-13 10:57:31]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:57:31]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:31]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [77e9f396a6ac93588c0f7097b9629b3188ae3d464d873e2d344d0ac9315494ce531b38873a933380, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:57:31.670, 2023-11-13 10:57:31.670, 2024-11-13 10:57:31.670]
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_access_tokens] where [id] = ? [77e9f396a6ac93588c0f7097b9629b3188ae3d464d873e2d344d0ac9315494ce531b38873a933380]
+
+[2023-11-13 10:57:31]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:57:31.700, 77e9f396a6ac93588c0f7097b9629b3188ae3d464d873e2d344d0ac9315494ce531b38873a933380]
+
+[2023-11-13 10:57:31]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:31]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [9a44aa098ebde2b519d31d08aabedd22c100c8c7fc526dcd98bf1aab6231ad07bd8f31dcd5afeae2, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:57:31.761, 2023-11-13 10:57:31.761, 2024-11-13 10:57:31.761]
+
+[2023-11-13 10:57:31]
+select top 1 * from [oauth_access_tokens] where [id] = ? [9a44aa098ebde2b519d31d08aabedd22c100c8c7fc526dcd98bf1aab6231ad07bd8f31dcd5afeae2]
+
+[2023-11-13 10:57:31]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:57:31.789, 9a44aa098ebde2b519d31d08aabedd22c100c8c7fc526dcd98bf1aab6231ad07bd8f31dcd5afeae2]
+
+[2023-11-13 10:57:32]
+select * from [tbl_menu] where [is_delete] = ? and [tbl_menu].[deleted_at] is null [0]
+
+[2023-11-13 10:57:32]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:32]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:32]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:32]
+select count(*) as aggregate from [tbl_meal] where [is_delete] = ? and [tbl_meal].[deleted_at] is null [0]
+
+[2023-11-13 10:57:32]
+select top 20 * from [tbl_meal] where [is_delete] = ? and [tbl_meal].[deleted_at] is null [0]
+
+[2023-11-13 10:57:32]
+select * from [tbl_eat] where [is_delete] = ? and [tbl_eat].[deleted_at] is null [0]
+
+[2023-11-13 10:57:32]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:57:32]
+select [id], [eat_id], [eat_date], [time_config_name] from [tbl_meal] where cast([eat_date] as date) >= ? and cast([eat_date] as date) <= ? and [tbl_meal].[deleted_at] is null [2023-10-29, 2023-12-10]
+
+[2023-11-13 10:57:33]
+select top 1 * from [oauth_access_tokens] where [id] = ? [77e9f396a6ac93588c0f7097b9629b3188ae3d464d873e2d344d0ac9315494ce531b38873a933380]
+
+[2023-11-13 10:57:33]
+select top 1 * from [oauth_access_tokens] where [id] = ? [77e9f396a6ac93588c0f7097b9629b3188ae3d464d873e2d344d0ac9315494ce531b38873a933380]
+
+[2023-11-13 10:57:33]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:33]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:33]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:33]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:33]
+select top 1 * from [oauth_access_tokens] where [id] = ? [77e9f396a6ac93588c0f7097b9629b3188ae3d464d873e2d344d0ac9315494ce531b38873a933380]
+
+[2023-11-13 10:57:33]
+select top 1 * from [oauth_access_tokens] where [id] = ? [77e9f396a6ac93588c0f7097b9629b3188ae3d464d873e2d344d0ac9315494ce531b38873a933380]
+
+[2023-11-13 10:57:33]
+select top 1 * from [tbl_meal] where [is_delete] = ? and cast([eat_date] as date) = ? and [time_config_name] = ? and [tbl_meal].[deleted_at] is null [0, 2023-11-01T00:00:00, Bữa khuya]
+
+[2023-11-13 10:57:33]
+select [staff_id] from [tbl_meal_comment] where [is_delete] = ? and [meal_id] = ? and [tbl_meal_comment].[deleted_at] is null group by [staff_id] [0, 2AB1A0D5-E948-0F3E-4BA2-99856497A2A2]
+
+[2023-11-13 10:57:33]
+select * from [tbl_eat] where [is_delete] = ? and [tbl_eat].[deleted_at] is null [0]
+
+[2023-11-13 10:57:33]
+select top 1 * from [tbl_config] where [id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:57:48]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:48]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:48]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:48]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:48]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:57:48]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:48]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:57:48]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:57:48]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:57:48]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:57:48]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:48]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:48]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [432850208af36d0054eff917e5d7a017700cf4fe389b8b707abee9f8798556d7a2383b75a7aa0c7c, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:57:48.741, 2023-11-13 10:57:48.741, 2024-11-13 10:57:48.741]
+
+[2023-11-13 10:57:48]
+select top 1 * from [oauth_access_tokens] where [id] = ? [432850208af36d0054eff917e5d7a017700cf4fe389b8b707abee9f8798556d7a2383b75a7aa0c7c]
+
+[2023-11-13 10:57:48]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:57:48.770, 432850208af36d0054eff917e5d7a017700cf4fe389b8b707abee9f8798556d7a2383b75a7aa0c7c]
+
+[2023-11-13 10:57:50]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:50]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:50]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:50]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:57:50]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:50]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:57:50]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0]
+
+[2023-11-13 10:57:50]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:57:50]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:50]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:57:50]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:57:50]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:57:50]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:50]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:50]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [7a77000f0204158b9534291290037466bf1e2348d8eea096bc2170f0c53ccba292c71bc41b83e9f9, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:57:50.567, 2023-11-13 10:57:50.567, 2024-11-13 10:57:50.567]
+
+[2023-11-13 10:57:50]
+select top 1 * from [oauth_access_tokens] where [id] = ? [7a77000f0204158b9534291290037466bf1e2348d8eea096bc2170f0c53ccba292c71bc41b83e9f9]
+
+[2023-11-13 10:57:50]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:57:50.597, 7a77000f0204158b9534291290037466bf1e2348d8eea096bc2170f0c53ccba292c71bc41b83e9f9]
+
+[2023-11-13 10:57:53]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:53]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:53]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:53]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:53]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:57:53]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:53]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:57:53]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:57:53]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:57:53]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:57:53]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:53]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:53]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [ec45c89b67cb36f0deddb89b3b1e606f79014861cee7371094688102e7ce45626c17f998bebaf8e8, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:57:53.699, 2023-11-13 10:57:53.699, 2024-11-13 10:57:53.699]
+
+[2023-11-13 10:57:53]
+select top 1 * from [oauth_access_tokens] where [id] = ? [ec45c89b67cb36f0deddb89b3b1e606f79014861cee7371094688102e7ce45626c17f998bebaf8e8]
+
+[2023-11-13 10:57:53]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:57:53.725, ec45c89b67cb36f0deddb89b3b1e606f79014861cee7371094688102e7ce45626c17f998bebaf8e8]
+
+[2023-11-13 10:57:57]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:57]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-13 10:57:57]
+select * from [tbl_staff] where [is_delete] = ? [0]
+
+[2023-11-13 10:57:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:57:57]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:57:57]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:57:57]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:57:57]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:57]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:57]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [a9dbd6fd1b161157a670e52a14deff7252a8be8f90470482d11dea338f66e561f78bca5e9567f191, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:57:57.557, 2023-11-13 10:57:57.557, 2024-11-13 10:57:57.557]
+
+[2023-11-13 10:57:57]
+select top 1 * from [oauth_access_tokens] where [id] = ? [a9dbd6fd1b161157a670e52a14deff7252a8be8f90470482d11dea338f66e561f78bca5e9567f191]
+
+[2023-11-13 10:57:57]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:57:57.587, a9dbd6fd1b161157a670e52a14deff7252a8be8f90470482d11dea338f66e561f78bca5e9567f191]
+
+[2023-11-13 10:57:57]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:57]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:57]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:58]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0]
+
+[2023-11-13 10:57:58]
+select * from [tbl_staff] where [tbl_staff].[id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [0969EEF2-D599-BDFB-3A8B-74FF2DB07779, 0FBE877F-48EA-405F-C94B-39A59999087B, 15E20EB0-9C53-8B93-D6E1-728C868011CB, 2855E626-AADE-ED61-F791-9C6511C8F0AC, 64871EB8-2BC7-8B2F-D0A1-B125633D660A, 82A3CA58-DDB6-CA45-25AA-BC6F63EED086, 8AC750D6-88B3-89C6-DD5B-A1095619A06C, C46F055B-D6E6-7754-6A7E-4EC6C4EAD633, F023E78A-D4B3-B00A-0866-DA6BC67DB236, F6D7AEDD-5C29-F265-6346-FC9657FE6A4C]
+
+[2023-11-13 10:57:58]
+select * from [tbl_register_eat] where [tbl_register_eat].[id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null [295847E0-2E95-CABF-C0A0-2382EBA3E6E7, 2E763596-E915-B5D7-B5BA-583733FB15FA, 33D1793D-3835-8290-56CD-134C85524E8F, 3D43D578-3F8A-67D5-5836-A21DE18F4C1E, 3E2F42A1-5447-47B5-0D2A-9FB2817F1A2A, 42492003-95C4-6C60-71DC-D944578E0AAB, 43E7E2DF-D27E-6307-B562-24948CDFF365, 4C9D50BC-91B2-6383-ABD6-A41147F9F53B, 7152206D-D8FE-E92A-777F-10CC14F39F3B, 92FFEDCF-5BF1-8AFE-5B16-4C9F017A1BBB, A0929439-7187-3A3E-3D55-CA45AC607D17, A534BD0B-3FC3-D789-4E4C-B2D6952F9F9F, A88264FE-E690-9744-503F-C311B4034A7C, B2DDE871-08A0-A77C-3E08-F87968E4135F, B7D0EE79-B47A-DC08-DF85-57092D0FB4AD, CAED6956-0A9D-9AB4-BC4B-0C31DAC6EB14, CDEFDA63-1C0F-AB15-58A1-396CF255C4D8, D1C30BFD-C030-1ABA-4BB2-897FAA5816D7, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-13 10:57:58]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?, ?) and [tbl_company].[deleted_at] is null [0, , 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:57:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:57:59]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:57:59]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:59]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:57:59]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:59]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:57:59]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:57:59]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:57:59]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:57:59]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:57:59]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:57:59]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:59]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:57:59]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [3052e42e0482483cc5d9cec596dbf766b7158d349a19db15dcef1a7971087c0c91fe023d363884e0, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:57:59.244, 2023-11-13 10:57:59.244, 2024-11-13 10:57:59.244]
+
+[2023-11-13 10:57:59]
+select top 1 * from [oauth_access_tokens] where [id] = ? [3052e42e0482483cc5d9cec596dbf766b7158d349a19db15dcef1a7971087c0c91fe023d363884e0]
+
+[2023-11-13 10:57:59]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:57:59.293, 3052e42e0482483cc5d9cec596dbf766b7158d349a19db15dcef1a7971087c0c91fe023d363884e0]
+
+[2023-11-13 10:58:00]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:58:00]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-13 10:58:00]
+select * from [tbl_staff] where [is_delete] = ? [0]
+
+[2023-11-13 10:58:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:58:00]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:58:00]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:58:00]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:58:00]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:00]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:00]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [1691ac7f917a718ff24b1f2143ff773210f28ed74d94485cc3275c5ca6a7e17a1c26061b25cb52da, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:58:00.390, 2023-11-13 10:58:00.390, 2024-11-13 10:58:00.390]
+
+[2023-11-13 10:58:00]
+select top 1 * from [oauth_access_tokens] where [id] = ? [1691ac7f917a718ff24b1f2143ff773210f28ed74d94485cc3275c5ca6a7e17a1c26061b25cb52da]
+
+[2023-11-13 10:58:00]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:58:00.420, 1691ac7f917a718ff24b1f2143ff773210f28ed74d94485cc3275c5ca6a7e17a1c26061b25cb52da]
+
+[2023-11-13 10:58:00]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:58:00]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:58:00]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:58:00]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0]
+
+[2023-11-13 10:58:00]
+select * from [tbl_staff] where [tbl_staff].[id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [0969EEF2-D599-BDFB-3A8B-74FF2DB07779, 0FBE877F-48EA-405F-C94B-39A59999087B, 15E20EB0-9C53-8B93-D6E1-728C868011CB, 2855E626-AADE-ED61-F791-9C6511C8F0AC, 64871EB8-2BC7-8B2F-D0A1-B125633D660A, 82A3CA58-DDB6-CA45-25AA-BC6F63EED086, 8AC750D6-88B3-89C6-DD5B-A1095619A06C, C46F055B-D6E6-7754-6A7E-4EC6C4EAD633, F023E78A-D4B3-B00A-0866-DA6BC67DB236, F6D7AEDD-5C29-F265-6346-FC9657FE6A4C]
+
+[2023-11-13 10:58:00]
+select * from [tbl_register_eat] where [tbl_register_eat].[id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null [295847E0-2E95-CABF-C0A0-2382EBA3E6E7, 2E763596-E915-B5D7-B5BA-583733FB15FA, 33D1793D-3835-8290-56CD-134C85524E8F, 3D43D578-3F8A-67D5-5836-A21DE18F4C1E, 3E2F42A1-5447-47B5-0D2A-9FB2817F1A2A, 42492003-95C4-6C60-71DC-D944578E0AAB, 43E7E2DF-D27E-6307-B562-24948CDFF365, 4C9D50BC-91B2-6383-ABD6-A41147F9F53B, 7152206D-D8FE-E92A-777F-10CC14F39F3B, 92FFEDCF-5BF1-8AFE-5B16-4C9F017A1BBB, A0929439-7187-3A3E-3D55-CA45AC607D17, A534BD0B-3FC3-D789-4E4C-B2D6952F9F9F, A88264FE-E690-9744-503F-C311B4034A7C, B2DDE871-08A0-A77C-3E08-F87968E4135F, B7D0EE79-B47A-DC08-DF85-57092D0FB4AD, CAED6956-0A9D-9AB4-BC4B-0C31DAC6EB14, CDEFDA63-1C0F-AB15-58A1-396CF255C4D8, D1C30BFD-C030-1ABA-4BB2-897FAA5816D7, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-13 10:58:00]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?, ?) and [tbl_company].[deleted_at] is null [0, , 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:58:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:58:01]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:58:01]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:58:01]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:58:01]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:58:01]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:58:01]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:58:01]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:58:01]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:58:01]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:58:01]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:58:01]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:01]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:01]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [dbef8dfd2d7b4d65b7f82a0ef6fee9651d82f4663af785a176a3800b7b04c7e3ee54e3b5d5a239cc, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:58:01.955, 2023-11-13 10:58:01.955, 2024-11-13 10:58:01.955]
+
+[2023-11-13 10:58:01]
+select top 1 * from [oauth_access_tokens] where [id] = ? [dbef8dfd2d7b4d65b7f82a0ef6fee9651d82f4663af785a176a3800b7b04c7e3ee54e3b5d5a239cc]
+
+[2023-11-13 10:58:01]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:58:01.983, dbef8dfd2d7b4d65b7f82a0ef6fee9651d82f4663af785a176a3800b7b04c7e3ee54e3b5d5a239cc]
+
+[2023-11-13 10:58:04]
+select top 1 * from [oauth_access_tokens] where [id] = ? [dbef8dfd2d7b4d65b7f82a0ef6fee9651d82f4663af785a176a3800b7b04c7e3ee54e3b5d5a239cc]
+
+[2023-11-13 10:58:04]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:04]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:58:04]
+select top 1 * from [oauth_access_tokens] where [id] = ? [dbef8dfd2d7b4d65b7f82a0ef6fee9651d82f4663af785a176a3800b7b04c7e3ee54e3b5d5a239cc]
+
+[2023-11-13 10:58:04]
+select * from [tbl_staff] where [is_delete] = ? and [company_id] = ? [0, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:58:05]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:58:05]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:58:05]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:58:05]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:58:05]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:58:05]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:58:05]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [company_id] = ? and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, FDBB4C71-127C-E812-AC44-4E32D8265EC4, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:58:05]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:58:05]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:58:05]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:58:05]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:05]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:05]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [1082f6527d18e52d1c1cf063beee58015fdb66b99009c4cac3e0863bb68a77aa15e70b5b8fb4c3e8, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:58:05.277, 2023-11-13 10:58:05.277, 2024-11-13 10:58:05.277]
+
+[2023-11-13 10:58:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [1082f6527d18e52d1c1cf063beee58015fdb66b99009c4cac3e0863bb68a77aa15e70b5b8fb4c3e8]
+
+[2023-11-13 10:58:05]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:58:05.307, 1082f6527d18e52d1c1cf063beee58015fdb66b99009c4cac3e0863bb68a77aa15e70b5b8fb4c3e8]
+
+[2023-11-13 10:58:06]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:58:06]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:58:06]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:58:06]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:58:07]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:58:07]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:58:07]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 10:58:07]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:58:07]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:58:07]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:58:07]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:07]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:58:07]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [f74de06f77eb60cb8b7553af7e9a37d90effe41b8d1a84acf333dc471ec7a4f01e2eb11049137f16, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:58:07.089, 2023-11-13 10:58:07.089, 2024-11-13 10:58:07.089]
+
+[2023-11-13 10:58:07]
+select top 1 * from [oauth_access_tokens] where [id] = ? [f74de06f77eb60cb8b7553af7e9a37d90effe41b8d1a84acf333dc471ec7a4f01e2eb11049137f16]
+
+[2023-11-13 10:58:07]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:58:07.117, f74de06f77eb60cb8b7553af7e9a37d90effe41b8d1a84acf333dc471ec7a4f01e2eb11049137f16]
+
+[2023-11-13 10:59:42]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 10:59:42]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:59:42]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 10:59:42]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:59:42]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:59:42]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 10:59:42]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0]
+
+[2023-11-13 10:59:42]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-13 10:59:42]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 10:59:42]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 10:59:42]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 10:59:42]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 10:59:42]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:59:42]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 10:59:42]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [bbbb4cc7e5c7b6dde4cfb35db9643c735cf47dbb2ae8afee2dc6764772f595e72ed89e4a6d463f41, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 10:59:42.601, 2023-11-13 10:59:42.601, 2024-11-13 10:59:42.601]
+
+[2023-11-13 10:59:42]
+select top 1 * from [oauth_access_tokens] where [id] = ? [bbbb4cc7e5c7b6dde4cfb35db9643c735cf47dbb2ae8afee2dc6764772f595e72ed89e4a6d463f41]
+
+[2023-11-13 10:59:42]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 10:59:42.631, bbbb4cc7e5c7b6dde4cfb35db9643c735cf47dbb2ae8afee2dc6764772f595e72ed89e4a6d463f41]
+
+[2023-11-13 11:00:18]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:00:18]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:00:18]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:00:18]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:00:18]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:00:18]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:00:18]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:00:18]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 11:00:18]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 11:00:18]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 11:00:18]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:00:18]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:00:18]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [b4a31360fb01f18ffef982b9c662de1ae1b834dc3253d4be7e65b42892dfcddb9d4525298e572e61, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 11:00:18.483, 2023-11-13 11:00:18.483, 2024-11-13 11:00:18.483]
+
+[2023-11-13 11:00:18]
+select top 1 * from [oauth_access_tokens] where [id] = ? [b4a31360fb01f18ffef982b9c662de1ae1b834dc3253d4be7e65b42892dfcddb9d4525298e572e61]
+
+[2023-11-13 11:00:18]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 11:00:18.511, b4a31360fb01f18ffef982b9c662de1ae1b834dc3253d4be7e65b42892dfcddb9d4525298e572e61]
+
+[2023-11-13 11:00:20]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:00:20]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:00:20]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:00:20]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:00:20]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:00:20]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:00:20]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:00:20]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 11:00:20]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 11:00:20]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 11:00:20]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:00:20]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:00:20]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [0c7cddbfeff4c15a0196978617569a47f349046f4be356243c3613aed2e9ffaa08e4c099a4f37487, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 11:00:20.700, 2023-11-13 11:00:20.700, 2024-11-13 11:00:20.700]
+
+[2023-11-13 11:00:20]
+select top 1 * from [oauth_access_tokens] where [id] = ? [0c7cddbfeff4c15a0196978617569a47f349046f4be356243c3613aed2e9ffaa08e4c099a4f37487]
+
+[2023-11-13 11:00:20]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 11:00:20.730, 0c7cddbfeff4c15a0196978617569a47f349046f4be356243c3613aed2e9ffaa08e4c099a4f37487]
+
+[2023-11-13 11:02:40]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:02:40]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:02:40]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:02:40]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:02:40]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:02:40]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:02:40]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:02:59]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:02:59]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:02:59]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:02:59]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:02:59]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:02:59]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:33]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:03:33]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:03:33]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:03:33]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:33]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:03:33]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:33]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:33]
+select top 20 * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:33]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [0, 01CF9E24-1346-EFC5-630C-BD7E09794130, 295847E0-2E95-CABF-C0A0-2382EBA3E6E7, 3D43D578-3F8A-67D5-5836-A21DE18F4C1E, 3E2F42A1-5447-47B5-0D2A-9FB2817F1A2A, 42492003-95C4-6C60-71DC-D944578E0AAB, 43E7E2DF-D27E-6307-B562-24948CDFF365, 4C9D50BC-91B2-6383-ABD6-A41147F9F53B, 61006856-09B1-4298-2862-6C462C1232B7, 7152206D-D8FE-E92A-777F-10CC14F39F3B, 92FFEDCF-5BF1-8AFE-5B16-4C9F017A1BBB, A31BDB2E-2D7B-8572-95A0-A14995E6193F, A534BD0B-3FC3-D789-4E4C-B2D6952F9F9F, A88264FE-E690-9744-503F-C311B4034A7C, B7D0EE79-B47A-DC08-DF85-57092D0FB4AD, CAED6956-0A9D-9AB4-BC4B-0C31DAC6EB14, CDEFDA63-1C0F-AB15-58A1-396CF255C4D8, D1C30BFD-C030-1ABA-4BB2-897FAA5816D7, DF19AA30-B9B5-FA61-A4F8-F952FACC8008, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-13 11:03:33]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:03:33]
+select * from [user] where [is_delete] = ? and [user].[id] in (?, ?, ?, ?, ?, ?, ?) and [user].[deleted_at] is null [0, 0F2B8AFD-ECD4-2AAB-3F5C-0FF770199AB9, 3C864450-0A88-258C-0188-A8CC6C591D04, 476101A1-4235-57D1-94BD-0C555F232A2C, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5DB6D806-5B68-29AF-498C-F910A79FCEF6, 80F0E5AD-87E5-561C-62CE-C7F3D13B4A93, 9F7B0E88-8BB3-4CEA-FB2C-37D90EE71979]
+
+[2023-11-13 11:03:37]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:03:37]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:03:37]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:03:37]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:37]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:03:37]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:37]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:37]
+select top 20 * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:37]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [0, 01CF9E24-1346-EFC5-630C-BD7E09794130, 295847E0-2E95-CABF-C0A0-2382EBA3E6E7, 3D43D578-3F8A-67D5-5836-A21DE18F4C1E, 3E2F42A1-5447-47B5-0D2A-9FB2817F1A2A, 42492003-95C4-6C60-71DC-D944578E0AAB, 43E7E2DF-D27E-6307-B562-24948CDFF365, 4C9D50BC-91B2-6383-ABD6-A41147F9F53B, 61006856-09B1-4298-2862-6C462C1232B7, 7152206D-D8FE-E92A-777F-10CC14F39F3B, 92FFEDCF-5BF1-8AFE-5B16-4C9F017A1BBB, A31BDB2E-2D7B-8572-95A0-A14995E6193F, A534BD0B-3FC3-D789-4E4C-B2D6952F9F9F, A88264FE-E690-9744-503F-C311B4034A7C, B7D0EE79-B47A-DC08-DF85-57092D0FB4AD, CAED6956-0A9D-9AB4-BC4B-0C31DAC6EB14, CDEFDA63-1C0F-AB15-58A1-396CF255C4D8, D1C30BFD-C030-1ABA-4BB2-897FAA5816D7, DF19AA30-B9B5-FA61-A4F8-F952FACC8008, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-13 11:03:38]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:03:38]
+select * from [user] where [is_delete] = ? and [user].[id] in (?, ?, ?, ?, ?, ?, ?) and [user].[deleted_at] is null [0, 0F2B8AFD-ECD4-2AAB-3F5C-0FF770199AB9, 3C864450-0A88-258C-0188-A8CC6C591D04, 476101A1-4235-57D1-94BD-0C555F232A2C, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5DB6D806-5B68-29AF-498C-F910A79FCEF6, 80F0E5AD-87E5-561C-62CE-C7F3D13B4A93, 9F7B0E88-8BB3-4CEA-FB2C-37D90EE71979]
+
+[2023-11-13 11:03:38]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 11:03:38]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 11:03:38]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 11:03:38]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:03:38]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:03:38]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [04e0e4738e8aca310b60dc3722c69978118fc889b7c77ec64e86539127eefeef1e8130d0dbf980da, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 11:03:38.123, 2023-11-13 11:03:38.123, 2024-11-13 11:03:38.123]
+
+[2023-11-13 11:03:38]
+select top 1 * from [oauth_access_tokens] where [id] = ? [04e0e4738e8aca310b60dc3722c69978118fc889b7c77ec64e86539127eefeef1e8130d0dbf980da]
+
+[2023-11-13 11:03:38]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 11:03:38.166, 04e0e4738e8aca310b60dc3722c69978118fc889b7c77ec64e86539127eefeef1e8130d0dbf980da]
+
+[2023-11-13 11:03:45]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:03:45]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:03:45]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:03:45]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:45]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:03:45]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:45]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:03:58]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:03:58]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:03:58]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:03:58]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:58]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:03:58]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:03:58]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:04:06]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:04:06]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:06]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:06]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:06]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:04:06]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:06]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:04:09]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:04:09]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:09]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:09]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:09]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:04:09]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:09]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:04:10]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:04:10]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:10]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:10]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:10]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:04:10]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:10]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:04:24]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:04:24]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:24]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:24]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:24]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:04:24]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:24]
+select * from [tbl_register_eat] where [is_delete] = ? and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:04:24]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[register_eat_id] in (?) and [tbl_register_eat_detail].[deleted_at] is null [0, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:04:24]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?) and [tbl_company].[deleted_at] is null [0, ]
+
+[2023-11-13 11:04:24]
+select * from [user] where [is_delete] = ? and [user].[id] in (?) and [user].[deleted_at] is null [0, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:04:31]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:04:31]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:31]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:04:31]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:31]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:04:31]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:04:31]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:06:29]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:06:29]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:29]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:29]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:29]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:06:29]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:29]
+select * from [tbl_register_eat] where [is_delete] = ? and exists (select * from [user] where [tbl_register_eat].[user_id] = [user].[id] and [company_id] in (?, ?, ?, ?) and [is_delete] = ? and [user].[deleted_at] is null) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 0, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:06:33]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:06:33]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:33]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:33]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:33]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:06:33]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:33]
+select * from [tbl_register_eat] where [is_delete] = ? and exists (select * from [user] where [tbl_register_eat].[user_id] = [user].[id] and [company_id] in (?, ?, ?, ?) and [is_delete] = ? and [user].[deleted_at] is null) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 0, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:06:33]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:06:33]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:33]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:33]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:33]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:06:33]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:33]
+select * from [tbl_register_eat] where [is_delete] = ? and exists (select * from [user] where [tbl_register_eat].[user_id] = [user].[id] and [company_id] in (?, ?, ?, ?) and [is_delete] = ? and [user].[deleted_at] is null) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 0, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:06:34]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:06:34]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:34]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:34]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:34]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:06:34]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:34]
+select * from [tbl_register_eat] where [is_delete] = ? and exists (select * from [user] where [tbl_register_eat].[user_id] = [user].[id] and [company_id] in (?, ?, ?, ?) and [is_delete] = ? and [user].[deleted_at] is null) and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 0, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:06:56]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:06:56]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:56]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:06:56]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:56]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:06:56]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:06:56]
+select * from [tbl_register_eat] where [is_delete] = ? and [id] = ? and [tbl_register_eat].[deleted_at] is null [0, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:06:56]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[register_eat_id] in (?) and [tbl_register_eat_detail].[deleted_at] is null [0, 33D1793D-3835-8290-56CD-134C85524E8F]
+
+[2023-11-13 11:06:56]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?) and [tbl_company].[deleted_at] is null [0, ]
+
+[2023-11-13 11:06:56]
+select * from [user] where [is_delete] = ? and [user].[id] in (?) and [user].[deleted_at] is null [0, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:21:10]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:21:10]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:21:10]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:21:10]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:21:10]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:21:10]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:21:10]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [tbl_register_eat].[deleted_at] is null [0]
+
+[2023-11-13 11:21:10]
+select top 20 * from [tbl_register_eat] where [is_delete] = ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0]
+
+[2023-11-13 11:21:10]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [0, 01CF9E24-1346-EFC5-630C-BD7E09794130, 295847E0-2E95-CABF-C0A0-2382EBA3E6E7, 33D1793D-3835-8290-56CD-134C85524E8F, 3D43D578-3F8A-67D5-5836-A21DE18F4C1E, 3E2F42A1-5447-47B5-0D2A-9FB2817F1A2A, 42492003-95C4-6C60-71DC-D944578E0AAB, 43E7E2DF-D27E-6307-B562-24948CDFF365, 4C9D50BC-91B2-6383-ABD6-A41147F9F53B, 7152206D-D8FE-E92A-777F-10CC14F39F3B, 92FFEDCF-5BF1-8AFE-5B16-4C9F017A1BBB, A0929439-7187-3A3E-3D55-CA45AC607D17, A31BDB2E-2D7B-8572-95A0-A14995E6193F, A534BD0B-3FC3-D789-4E4C-B2D6952F9F9F, A88264FE-E690-9744-503F-C311B4034A7C, B2DDE871-08A0-A77C-3E08-F87968E4135F, B7D0EE79-B47A-DC08-DF85-57092D0FB4AD, CAED6956-0A9D-9AB4-BC4B-0C31DAC6EB14, D1C30BFD-C030-1ABA-4BB2-897FAA5816D7, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-13 11:21:10]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?, ?) and [tbl_company].[deleted_at] is null [0, , 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:21:10]
+select * from [user] where [is_delete] = ? and [user].[id] in (?, ?, ?, ?, ?, ?, ?) and [user].[deleted_at] is null [0, 0F2B8AFD-ECD4-2AAB-3F5C-0FF770199AB9, 3C864450-0A88-258C-0188-A8CC6C591D04, 476101A1-4235-57D1-94BD-0C555F232A2C, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5DB6D806-5B68-29AF-498C-F910A79FCEF6, 80F0E5AD-87E5-561C-62CE-C7F3D13B4A93, 9F7B0E88-8BB3-4CEA-FB2C-37D90EE71979]
+
+[2023-11-13 11:21:10]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 11:21:10]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 11:21:10]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 11:21:10]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:21:10]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:21:10]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [60a9bf94c9f55851049056010c3082d1b7996cfe0f38857052a74a7da233730bfd445885ed1a8d14, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 11:21:10.527, 2023-11-13 11:21:10.527, 2024-11-13 11:21:10.527]
+
+[2023-11-13 11:21:10]
+select top 1 * from [oauth_access_tokens] where [id] = ? [60a9bf94c9f55851049056010c3082d1b7996cfe0f38857052a74a7da233730bfd445885ed1a8d14]
+
+[2023-11-13 11:21:10]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 11:21:10.556, 60a9bf94c9f55851049056010c3082d1b7996cfe0f38857052a74a7da233730bfd445885ed1a8d14]
+
+[2023-11-13 11:29:19]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:29:19]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:29:19]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:29:19]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:29:19]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:29:19]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:29:19]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-13 11:29:35]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:29:35]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:29:35]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:29:35]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:29:35]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:29:35]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:29:35]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-13 11:50:48]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:50:48]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:50:48]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:50:48]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:50:48]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:50:48]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:50:48]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and exists (select * from [user] where [tbl_register_eat].[user_id] = [user].[id] and [company_id] in (?, ?, ?, ?) and [is_delete] = ? and [user].[deleted_at] is null) and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 0]
+
+[2023-11-13 11:50:49]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 11:50:49]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 11:50:49]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 11:50:49]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:50:49]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:50:49]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [308a2dcccf79974aef327d9591643df19f0fda5c2a0d3849ea51d2501ffcf42902d3d7d9ed43891c, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 11:50:49.194, 2023-11-13 11:50:49.194, 2024-11-13 11:50:49.194]
+
+[2023-11-13 11:50:49]
+select top 1 * from [oauth_access_tokens] where [id] = ? [308a2dcccf79974aef327d9591643df19f0fda5c2a0d3849ea51d2501ffcf42902d3d7d9ed43891c]
+
+[2023-11-13 11:50:49]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 11:50:49.289, 308a2dcccf79974aef327d9591643df19f0fda5c2a0d3849ea51d2501ffcf42902d3d7d9ed43891c]
+
+[2023-11-13 11:51:04]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-13 11:51:04]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:51:04]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-13 11:51:04]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:51:04]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:51:04]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:51:04]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:51:04]
+select top 20 * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-13 11:51:05]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [0, 01CF9E24-1346-EFC5-630C-BD7E09794130, 295847E0-2E95-CABF-C0A0-2382EBA3E6E7, 3D43D578-3F8A-67D5-5836-A21DE18F4C1E, 3E2F42A1-5447-47B5-0D2A-9FB2817F1A2A, 42492003-95C4-6C60-71DC-D944578E0AAB, 43E7E2DF-D27E-6307-B562-24948CDFF365, 4C9D50BC-91B2-6383-ABD6-A41147F9F53B, 61006856-09B1-4298-2862-6C462C1232B7, 7152206D-D8FE-E92A-777F-10CC14F39F3B, 92FFEDCF-5BF1-8AFE-5B16-4C9F017A1BBB, A31BDB2E-2D7B-8572-95A0-A14995E6193F, A534BD0B-3FC3-D789-4E4C-B2D6952F9F9F, A88264FE-E690-9744-503F-C311B4034A7C, B7D0EE79-B47A-DC08-DF85-57092D0FB4AD, CAED6956-0A9D-9AB4-BC4B-0C31DAC6EB14, CDEFDA63-1C0F-AB15-58A1-396CF255C4D8, D1C30BFD-C030-1ABA-4BB2-897FAA5816D7, DF19AA30-B9B5-FA61-A4F8-F952FACC8008, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-13 11:51:05]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-13 11:51:05]
+select * from [user] where [is_delete] = ? and [user].[id] in (?, ?, ?, ?, ?, ?, ?) and [user].[deleted_at] is null [0, 0F2B8AFD-ECD4-2AAB-3F5C-0FF770199AB9, 3C864450-0A88-258C-0188-A8CC6C591D04, 476101A1-4235-57D1-94BD-0C555F232A2C, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5DB6D806-5B68-29AF-498C-F910A79FCEF6, 80F0E5AD-87E5-561C-62CE-C7F3D13B4A93, 9F7B0E88-8BB3-4CEA-FB2C-37D90EE71979]
+
+[2023-11-13 11:51:05]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-13 11:51:05]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-13 11:51:05]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-13 11:51:05]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:51:05]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-13 11:51:05]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [d4a7aaf59fc1d96ba6500ec7d7bf4764672112a7509883302cf9271f3d1eb950098841187bb08718, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-13 11:51:05.426, 2023-11-13 11:51:05.426, 2024-11-13 11:51:05.426]
+
+[2023-11-13 11:51:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [d4a7aaf59fc1d96ba6500ec7d7bf4764672112a7509883302cf9271f3d1eb950098841187bb08718]
+
+[2023-11-13 11:51:05]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-13 11:51:05.518, d4a7aaf59fc1d96ba6500ec7d7bf4764672112a7509883302cf9271f3d1eb950098841187bb08718]
+

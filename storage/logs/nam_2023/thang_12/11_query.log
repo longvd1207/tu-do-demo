@@ -1,0 +1,1899 @@
+[2023-12-11 13:53:49]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 13:55:31]
+select * from sys.sysobjects where id = object_id(?) and xtype in ('U', 'V') [migrations]
+
+[2023-12-11 13:55:31]
+create table "migrations" ("id" int identity primary key not null, "migration" nvarchar(191) not null, "batch" int not null) []
+
+[2023-12-11 13:55:31]
+select * from sys.sysobjects where id = object_id(?) and xtype in ('U', 'V') [migrations]
+
+[2023-12-11 13:55:31]
+select [migration] from [migrations] order by [batch] asc, [migration] asc []
+
+[2023-12-11 13:55:31]
+select [migration] from [migrations] order by [batch] asc, [migration] asc []
+
+[2023-12-11 13:55:31]
+select max([batch]) as aggregate from [migrations] []
+
+[2023-12-11 13:55:31]
+create table "users" ("id" bigint identity primary key not null, "user_name" nvarchar(191) not null, "full_name" nvarchar(191) not null, "email" nvarchar(191) not null, "email_verified_at" datetime null, "token" nvarchar(191) null, "password" nvarchar(191) not null, "password_raw" nvarchar(191) null, "is_delete" tinyint not null default '0', "remember_token" nvarchar(100) null, "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:31]
+create unique index "users_email_unique" on "users" ("email") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2014_10_12_000000_create_users_table, 1]
+
+[2023-12-11 13:55:31]
+create table "password_resets" ("email" nvarchar(191) not null, "token" nvarchar(191) not null, "created_at" datetime null) []
+
+[2023-12-11 13:55:31]
+alter table "password_resets" add constraint "password_resets_email_primary" primary key ("email") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2014_10_12_100000_create_password_resets_table, 1]
+
+[2023-12-11 13:55:31]
+create table "oauth_auth_codes" ("id" nvarchar(100) not null, "user_id" bigint not null, "client_id" bigint not null, "scopes" nvarchar(max) null, "revoked" bit not null, "expires_at" datetime null) []
+
+[2023-12-11 13:55:31]
+alter table "oauth_auth_codes" add constraint "oauth_auth_codes_id_primary" primary key ("id") []
+
+[2023-12-11 13:55:31]
+create index "oauth_auth_codes_user_id_index" on "oauth_auth_codes" ("user_id") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000001_create_oauth_auth_codes_table, 1]
+
+[2023-12-11 13:55:31]
+create table "oauth_access_tokens" ("id" nvarchar(100) not null, "user_id" bigint null, "client_id" bigint not null, "name" nvarchar(191) null, "scopes" nvarchar(max) null, "revoked" bit not null, "created_at" datetime null, "updated_at" datetime null, "expires_at" datetime null) []
+
+[2023-12-11 13:55:31]
+alter table "oauth_access_tokens" add constraint "oauth_access_tokens_id_primary" primary key ("id") []
+
+[2023-12-11 13:55:31]
+create index "oauth_access_tokens_user_id_index" on "oauth_access_tokens" ("user_id") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000002_create_oauth_access_tokens_table, 1]
+
+[2023-12-11 13:55:31]
+create table "oauth_refresh_tokens" ("id" nvarchar(100) not null, "access_token_id" nvarchar(100) not null, "revoked" bit not null, "expires_at" datetime null) []
+
+[2023-12-11 13:55:31]
+alter table "oauth_refresh_tokens" add constraint "oauth_refresh_tokens_id_primary" primary key ("id") []
+
+[2023-12-11 13:55:31]
+create index "oauth_refresh_tokens_access_token_id_index" on "oauth_refresh_tokens" ("access_token_id") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000003_create_oauth_refresh_tokens_table, 1]
+
+[2023-12-11 13:55:31]
+create table "oauth_clients" ("id" bigint identity primary key not null, "user_id" bigint null, "name" nvarchar(191) not null, "secret" nvarchar(100) null, "provider" nvarchar(191) null, "redirect" nvarchar(max) not null, "personal_access_client" bit not null, "password_client" bit not null, "revoked" bit not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:31]
+create index "oauth_clients_user_id_index" on "oauth_clients" ("user_id") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000004_create_oauth_clients_table, 1]
+
+[2023-12-11 13:55:31]
+create table "oauth_personal_access_clients" ("id" bigint identity primary key not null, "client_id" bigint not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000005_create_oauth_personal_access_clients_table, 1]
+
+[2023-12-11 13:55:31]
+create table "failed_jobs" ("id" bigint identity primary key not null, "uuid" nvarchar(191) not null, "connection" nvarchar(max) not null, "queue" nvarchar(max) not null, "payload" nvarchar(max) not null, "exception" nvarchar(max) not null, "failed_at" datetime default CURRENT_TIMESTAMP not null) []
+
+[2023-12-11 13:55:31]
+create unique index "failed_jobs_uuid_unique" on "failed_jobs" ("uuid") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2019_08_19_000000_create_failed_jobs_table, 1]
+
+[2023-12-11 13:55:31]
+create table "personal_access_tokens" ("id" bigint identity primary key not null, "tokenable_type" nvarchar(191) not null, "tokenable_id" bigint not null, "name" nvarchar(191) not null, "token" nvarchar(64) not null, "abilities" nvarchar(max) null, "last_used_at" datetime null, "expires_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:31]
+create index "personal_access_tokens_tokenable_type_tokenable_id_index" on "personal_access_tokens" ("tokenable_type", "tokenable_id") []
+
+[2023-12-11 13:55:31]
+create unique index "personal_access_tokens_token_unique" on "personal_access_tokens" ("token") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2019_12_14_000001_create_personal_access_tokens_table, 1]
+
+[2023-12-11 13:55:31]
+create table "permissions" ("id" bigint identity primary key not null, "name" nvarchar(191) not null, "guard_name" nvarchar(191) not null, "description" nvarchar(191) not null, "module" nvarchar(191) not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:31]
+create unique index "permissions_name_guard_name_unique" on "permissions" ("name", "guard_name") []
+
+[2023-12-11 13:55:31]
+create table "roles" ("id" bigint identity primary key not null, "name" nvarchar(191) not null, "guard_name" nvarchar(191) not null, "is_manager" tinyint not null default '0', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:31]
+create unique index "roles_name_guard_name_unique" on "roles" ("name", "guard_name") []
+
+[2023-12-11 13:55:31]
+create table "model_has_permissions" ("permission_id" bigint not null, "model_type" nvarchar(191) not null, "model_id" nvarchar(191) not null) []
+
+[2023-12-11 13:55:31]
+create index "model_has_permissions_model_id_model_type_index" on "model_has_permissions" ("model_id", "model_type") []
+
+[2023-12-11 13:55:31]
+alter table "model_has_permissions" add constraint "model_has_permissions_permission_id_foreign" foreign key ("permission_id") references "permissions" ("id") on delete cascade []
+
+[2023-12-11 13:55:31]
+alter table "model_has_permissions" add constraint "model_has_permissions_permission_model_type_primary" primary key ("permission_id", "model_id", "model_type") []
+
+[2023-12-11 13:55:31]
+create table "model_has_roles" ("role_id" bigint not null, "model_type" nvarchar(191) not null, "model_id" nvarchar(191) not null) []
+
+[2023-12-11 13:55:31]
+create index "model_has_roles_model_id_model_type_index" on "model_has_roles" ("model_id", "model_type") []
+
+[2023-12-11 13:55:31]
+alter table "model_has_roles" add constraint "model_has_roles_role_id_foreign" foreign key ("role_id") references "roles" ("id") on delete cascade []
+
+[2023-12-11 13:55:31]
+alter table "model_has_roles" add constraint "model_has_roles_role_model_type_primary" primary key ("role_id", "model_id", "model_type") []
+
+[2023-12-11 13:55:31]
+create table "role_has_permissions" ("permission_id" bigint not null, "role_id" bigint not null) []
+
+[2023-12-11 13:55:31]
+alter table "role_has_permissions" add constraint "role_has_permissions_permission_id_foreign" foreign key ("permission_id") references "permissions" ("id") on delete cascade []
+
+[2023-12-11 13:55:31]
+alter table "role_has_permissions" add constraint "role_has_permissions_role_id_foreign" foreign key ("role_id") references "roles" ("id") on delete cascade []
+
+[2023-12-11 13:55:31]
+alter table "role_has_permissions" add constraint "role_has_permissions_permission_id_role_id_primary" primary key ("permission_id", "role_id") []
+
+[2023-12-11 13:55:31]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_155234_create_permissions_table, 1]
+
+[2023-12-11 13:55:32]
+create table "ticket_types" ("id" nvarchar(55) not null, "name" nvarchar(255) not null, "type" tinyint not null default '1', "price_online" decimal(9, 2) null, "price_offline" decimal(9, 2) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:32]
+create unique index "ticket_types_id_unique" on "ticket_types" ("id") []
+
+[2023-12-11 13:55:32]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160159_create_ticket_types_table, 1]
+
+[2023-12-11 13:55:32]
+create table "areas" ("id" nvarchar(55) not null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:32]
+create unique index "areas_id_unique" on "areas" ("id") []
+
+[2023-12-11 13:55:32]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160235_create_areas_table, 1]
+
+[2023-12-11 13:55:32]
+create table "fun_spots" ("id" nvarchar(55) not null, "area_id" nvarchar(55) null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:32]
+create unique index "fun_spots_id_unique" on "fun_spots" ("id") []
+
+[2023-12-11 13:55:32]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160752_create_fun_spots_table, 1]
+
+[2023-12-11 13:55:32]
+create table "services" ("id" nvarchar(55) not null, "area_id" nvarchar(55) null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:32]
+create unique index "services_id_unique" on "services" ("id") []
+
+[2023-12-11 13:55:32]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160804_create_services_table, 1]
+
+[2023-12-11 13:55:32]
+create table "maps" ("id" nvarchar(55) not null, "ticket_type_id" nvarchar(55) null, "type_id" nvarchar(55) null, "type" int null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:55:32]
+create unique index "maps_id_unique" on "maps" ("id") []
+
+[2023-12-11 13:55:32]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160828_create_maps_table, 1]
+
+[2023-12-11 13:57:09]
+select * from sys.sysobjects where id = object_id(?) and xtype in ('U', 'V') [migrations]
+
+[2023-12-11 13:57:09]
+create table "migrations" ("id" int identity primary key not null, "migration" nvarchar(191) not null, "batch" int not null) []
+
+[2023-12-11 13:57:09]
+select * from sys.sysobjects where id = object_id(?) and xtype in ('U', 'V') [migrations]
+
+[2023-12-11 13:57:09]
+select [migration] from [migrations] order by [batch] asc, [migration] asc []
+
+[2023-12-11 13:57:09]
+select [migration] from [migrations] order by [batch] asc, [migration] asc []
+
+[2023-12-11 13:57:09]
+select max([batch]) as aggregate from [migrations] []
+
+[2023-12-11 13:57:09]
+create table "users" ("id" bigint identity primary key not null, "user_name" nvarchar(191) not null, "full_name" nvarchar(191) not null, "email" nvarchar(191) not null, "email_verified_at" datetime null, "token" nvarchar(191) null, "password" nvarchar(191) not null, "password_raw" nvarchar(191) null, "is_delete" tinyint not null default '0', "remember_token" nvarchar(100) null, "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:09]
+create unique index "users_email_unique" on "users" ("email") []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2014_10_12_000000_create_users_table, 1]
+
+[2023-12-11 13:57:09]
+create table "password_resets" ("email" nvarchar(191) not null, "token" nvarchar(191) not null, "created_at" datetime null) []
+
+[2023-12-11 13:57:09]
+alter table "password_resets" add constraint "password_resets_email_primary" primary key ("email") []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2014_10_12_100000_create_password_resets_table, 1]
+
+[2023-12-11 13:57:09]
+create table "oauth_auth_codes" ("id" nvarchar(100) not null, "user_id" bigint not null, "client_id" bigint not null, "scopes" nvarchar(max) null, "revoked" bit not null, "expires_at" datetime null) []
+
+[2023-12-11 13:57:09]
+alter table "oauth_auth_codes" add constraint "oauth_auth_codes_id_primary" primary key ("id") []
+
+[2023-12-11 13:57:09]
+create index "oauth_auth_codes_user_id_index" on "oauth_auth_codes" ("user_id") []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000001_create_oauth_auth_codes_table, 1]
+
+[2023-12-11 13:57:09]
+create table "oauth_access_tokens" ("id" nvarchar(100) not null, "user_id" bigint null, "client_id" bigint not null, "name" nvarchar(191) null, "scopes" nvarchar(max) null, "revoked" bit not null, "created_at" datetime null, "updated_at" datetime null, "expires_at" datetime null) []
+
+[2023-12-11 13:57:09]
+alter table "oauth_access_tokens" add constraint "oauth_access_tokens_id_primary" primary key ("id") []
+
+[2023-12-11 13:57:09]
+create index "oauth_access_tokens_user_id_index" on "oauth_access_tokens" ("user_id") []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000002_create_oauth_access_tokens_table, 1]
+
+[2023-12-11 13:57:09]
+create table "oauth_refresh_tokens" ("id" nvarchar(100) not null, "access_token_id" nvarchar(100) not null, "revoked" bit not null, "expires_at" datetime null) []
+
+[2023-12-11 13:57:09]
+alter table "oauth_refresh_tokens" add constraint "oauth_refresh_tokens_id_primary" primary key ("id") []
+
+[2023-12-11 13:57:09]
+create index "oauth_refresh_tokens_access_token_id_index" on "oauth_refresh_tokens" ("access_token_id") []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000003_create_oauth_refresh_tokens_table, 1]
+
+[2023-12-11 13:57:09]
+create table "oauth_clients" ("id" bigint identity primary key not null, "user_id" bigint null, "name" nvarchar(191) not null, "secret" nvarchar(100) null, "provider" nvarchar(191) null, "redirect" nvarchar(max) not null, "personal_access_client" bit not null, "password_client" bit not null, "revoked" bit not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:09]
+create index "oauth_clients_user_id_index" on "oauth_clients" ("user_id") []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000004_create_oauth_clients_table, 1]
+
+[2023-12-11 13:57:09]
+create table "oauth_personal_access_clients" ("id" bigint identity primary key not null, "client_id" bigint not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000005_create_oauth_personal_access_clients_table, 1]
+
+[2023-12-11 13:57:09]
+create table "failed_jobs" ("id" bigint identity primary key not null, "uuid" nvarchar(191) not null, "connection" nvarchar(max) not null, "queue" nvarchar(max) not null, "payload" nvarchar(max) not null, "exception" nvarchar(max) not null, "failed_at" datetime default CURRENT_TIMESTAMP not null) []
+
+[2023-12-11 13:57:09]
+create unique index "failed_jobs_uuid_unique" on "failed_jobs" ("uuid") []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2019_08_19_000000_create_failed_jobs_table, 1]
+
+[2023-12-11 13:57:09]
+create table "personal_access_tokens" ("id" bigint identity primary key not null, "tokenable_type" nvarchar(191) not null, "tokenable_id" bigint not null, "name" nvarchar(191) not null, "token" nvarchar(64) not null, "abilities" nvarchar(max) null, "last_used_at" datetime null, "expires_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:09]
+create index "personal_access_tokens_tokenable_type_tokenable_id_index" on "personal_access_tokens" ("tokenable_type", "tokenable_id") []
+
+[2023-12-11 13:57:09]
+create unique index "personal_access_tokens_token_unique" on "personal_access_tokens" ("token") []
+
+[2023-12-11 13:57:09]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2019_12_14_000001_create_personal_access_tokens_table, 1]
+
+[2023-12-11 13:57:09]
+create table "permissions" ("id" bigint identity primary key not null, "name" nvarchar(191) not null, "guard_name" nvarchar(191) not null, "description" nvarchar(191) not null, "module" nvarchar(191) not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:09]
+create unique index "permissions_name_guard_name_unique" on "permissions" ("name", "guard_name") []
+
+[2023-12-11 13:57:10]
+create table "roles" ("id" bigint identity primary key not null, "name" nvarchar(191) not null, "guard_name" nvarchar(191) not null, "is_manager" tinyint not null default '0', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "roles_name_guard_name_unique" on "roles" ("name", "guard_name") []
+
+[2023-12-11 13:57:10]
+create table "model_has_permissions" ("permission_id" bigint not null, "model_type" nvarchar(191) not null, "model_id" nvarchar(191) not null) []
+
+[2023-12-11 13:57:10]
+create index "model_has_permissions_model_id_model_type_index" on "model_has_permissions" ("model_id", "model_type") []
+
+[2023-12-11 13:57:10]
+alter table "model_has_permissions" add constraint "model_has_permissions_permission_id_foreign" foreign key ("permission_id") references "permissions" ("id") on delete cascade []
+
+[2023-12-11 13:57:10]
+alter table "model_has_permissions" add constraint "model_has_permissions_permission_model_type_primary" primary key ("permission_id", "model_id", "model_type") []
+
+[2023-12-11 13:57:10]
+create table "model_has_roles" ("role_id" bigint not null, "model_type" nvarchar(191) not null, "model_id" nvarchar(191) not null) []
+
+[2023-12-11 13:57:10]
+create index "model_has_roles_model_id_model_type_index" on "model_has_roles" ("model_id", "model_type") []
+
+[2023-12-11 13:57:10]
+alter table "model_has_roles" add constraint "model_has_roles_role_id_foreign" foreign key ("role_id") references "roles" ("id") on delete cascade []
+
+[2023-12-11 13:57:10]
+alter table "model_has_roles" add constraint "model_has_roles_role_model_type_primary" primary key ("role_id", "model_id", "model_type") []
+
+[2023-12-11 13:57:10]
+create table "role_has_permissions" ("permission_id" bigint not null, "role_id" bigint not null) []
+
+[2023-12-11 13:57:10]
+alter table "role_has_permissions" add constraint "role_has_permissions_permission_id_foreign" foreign key ("permission_id") references "permissions" ("id") on delete cascade []
+
+[2023-12-11 13:57:10]
+alter table "role_has_permissions" add constraint "role_has_permissions_role_id_foreign" foreign key ("role_id") references "roles" ("id") on delete cascade []
+
+[2023-12-11 13:57:10]
+alter table "role_has_permissions" add constraint "role_has_permissions_permission_id_role_id_primary" primary key ("permission_id", "role_id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_155234_create_permissions_table, 1]
+
+[2023-12-11 13:57:10]
+create table "ticket_types" ("id" nvarchar(55) not null, "name" nvarchar(255) not null, "type" tinyint not null default '1', "price_online" decimal(9, 2) null, "price_offline" decimal(9, 2) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "ticket_types_id_unique" on "ticket_types" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160159_create_ticket_types_table, 1]
+
+[2023-12-11 13:57:10]
+create table "areas" ("id" nvarchar(55) not null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "areas_id_unique" on "areas" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160235_create_areas_table, 1]
+
+[2023-12-11 13:57:10]
+create table "fun_spots" ("id" nvarchar(55) not null, "area_id" nvarchar(55) null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "fun_spots_id_unique" on "fun_spots" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160752_create_fun_spots_table, 1]
+
+[2023-12-11 13:57:10]
+create table "services" ("id" nvarchar(55) not null, "area_id" nvarchar(55) null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "services_id_unique" on "services" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160804_create_services_table, 1]
+
+[2023-12-11 13:57:10]
+create table "maps" ("id" nvarchar(55) not null, "ticket_type_id" nvarchar(55) null, "type_id" nvarchar(55) null, "type" int null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "maps_id_unique" on "maps" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160828_create_maps_table, 1]
+
+[2023-12-11 13:57:10]
+create table "device_config" ("device_id" nvarchar(55) not null, "type_id" nvarchar(55) null, "type" tinyint null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "device_config_device_id_unique" on "device_config" ("device_id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_161432_create_device_config_table, 1]
+
+[2023-12-11 13:57:10]
+create table "logs" ("id" nvarchar(55) not null, "user_id" nvarchar(55) not null, "model" nvarchar(191) null, "before_action" nvarchar(max) null, "after_action" nvarchar(max) null, "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "logs_id_unique" on "logs" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_161449_create_logs_table, 1]
+
+[2023-12-11 13:57:10]
+create table "orders" ("id" nvarchar(55) not null, "created_by" nvarchar(55) not null, "type" tinyint not null default '0', "real_amount" decimal(14, 2) null, "note" nvarchar(255) null, "amount" decimal(14, 2) not null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "orders_id_unique" on "orders" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_161607_create_orders_table, 1]
+
+[2023-12-11 13:57:10]
+create table "tickets" ("id" nvarchar(55) not null, "ticket_type_name" nvarchar(55) null, "ticket_type_id" nvarchar(55) not null, "use_date" datetime null, "order_id" nvarchar(55) not null, "qr_code" nvarchar(255) not null, "price" decimal(14, 2) not null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "tickets_id_unique" on "tickets" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_161655_create_tickets_table, 1]
+
+[2023-12-11 13:57:10]
+create table "events" ("id" nvarchar(55) not null, "ticket_id" nvarchar(55) null, "ticket_type_id" nvarchar(55) null, "order_id" nvarchar(55) not null, "time_in" datetime not null, "note" nvarchar(max) not null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "events_id_unique" on "events" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_18_083442_create_events_table, 1]
+
+[2023-12-11 13:57:10]
+create table "configs" ("id" nvarchar(55) not null, "max_individual_ticket" int null, "max_group_ticket" int null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "configs_id_unique" on "configs" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_18_083506_create_configs_table, 1]
+
+[2023-12-11 13:57:10]
+create table "payment_status" ("id" nvarchar(55) not null, "status" tinyint not null default '0', "note" nvarchar(max) null, "order_id" nvarchar(55) not null, "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 13:57:10]
+create unique index "payment_status_id_unique" on "payment_status" ("id") []
+
+[2023-12-11 13:57:10]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_18_084147_create_payment_status_table, 1]
+
+[2023-12-11 14:00:41]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 14:01:09]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 14:01:57]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 14:04:14]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 14:04:36]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 14:08:56]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 14:09:07]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [cuong1, 0]
+
+[2023-12-11 14:09:32]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [cuong1, 0]
+
+[2023-12-11 14:09:36]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 14:09:44]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 14:20:24]
+select * from sys.sysobjects where id = object_id(?) and xtype in ('U', 'V') [migrations]
+
+[2023-12-11 14:20:24]
+create table "migrations" ("id" int identity primary key not null, "migration" nvarchar(191) not null, "batch" int not null) []
+
+[2023-12-11 14:20:24]
+select * from sys.sysobjects where id = object_id(?) and xtype in ('U', 'V') [migrations]
+
+[2023-12-11 14:20:24]
+select [migration] from [migrations] order by [batch] asc, [migration] asc []
+
+[2023-12-11 14:20:24]
+select [migration] from [migrations] order by [batch] asc, [migration] asc []
+
+[2023-12-11 14:20:24]
+select max([batch]) as aggregate from [migrations] []
+
+[2023-12-11 14:20:24]
+create table "users" ("id" bigint identity primary key not null, "user_name" nvarchar(191) not null, "full_name" nvarchar(191) not null, "email" nvarchar(191) not null, "email_verified_at" datetime null, "token" nvarchar(191) null, "password" nvarchar(191) not null, "password_raw" nvarchar(191) null, "is_delete" tinyint not null default '0', "remember_token" nvarchar(100) null, "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:24]
+create unique index "users_email_unique" on "users" ("email") []
+
+[2023-12-11 14:20:24]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2014_10_12_000000_create_users_table, 1]
+
+[2023-12-11 14:20:25]
+create table "password_resets" ("email" nvarchar(191) not null, "token" nvarchar(191) not null, "created_at" datetime null) []
+
+[2023-12-11 14:20:25]
+alter table "password_resets" add constraint "password_resets_email_primary" primary key ("email") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2014_10_12_100000_create_password_resets_table, 1]
+
+[2023-12-11 14:20:25]
+create table "oauth_auth_codes" ("id" nvarchar(100) not null, "user_id" bigint not null, "client_id" bigint not null, "scopes" nvarchar(max) null, "revoked" bit not null, "expires_at" datetime null) []
+
+[2023-12-11 14:20:25]
+alter table "oauth_auth_codes" add constraint "oauth_auth_codes_id_primary" primary key ("id") []
+
+[2023-12-11 14:20:25]
+create index "oauth_auth_codes_user_id_index" on "oauth_auth_codes" ("user_id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000001_create_oauth_auth_codes_table, 1]
+
+[2023-12-11 14:20:25]
+create table "oauth_access_tokens" ("id" nvarchar(100) not null, "user_id" bigint null, "client_id" bigint not null, "name" nvarchar(191) null, "scopes" nvarchar(max) null, "revoked" bit not null, "created_at" datetime null, "updated_at" datetime null, "expires_at" datetime null) []
+
+[2023-12-11 14:20:25]
+alter table "oauth_access_tokens" add constraint "oauth_access_tokens_id_primary" primary key ("id") []
+
+[2023-12-11 14:20:25]
+create index "oauth_access_tokens_user_id_index" on "oauth_access_tokens" ("user_id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000002_create_oauth_access_tokens_table, 1]
+
+[2023-12-11 14:20:25]
+create table "oauth_refresh_tokens" ("id" nvarchar(100) not null, "access_token_id" nvarchar(100) not null, "revoked" bit not null, "expires_at" datetime null) []
+
+[2023-12-11 14:20:25]
+alter table "oauth_refresh_tokens" add constraint "oauth_refresh_tokens_id_primary" primary key ("id") []
+
+[2023-12-11 14:20:25]
+create index "oauth_refresh_tokens_access_token_id_index" on "oauth_refresh_tokens" ("access_token_id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000003_create_oauth_refresh_tokens_table, 1]
+
+[2023-12-11 14:20:25]
+create table "oauth_clients" ("id" bigint identity primary key not null, "user_id" bigint null, "name" nvarchar(191) not null, "secret" nvarchar(100) null, "provider" nvarchar(191) null, "redirect" nvarchar(max) not null, "personal_access_client" bit not null, "password_client" bit not null, "revoked" bit not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create index "oauth_clients_user_id_index" on "oauth_clients" ("user_id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000004_create_oauth_clients_table, 1]
+
+[2023-12-11 14:20:25]
+create table "oauth_personal_access_clients" ("id" bigint identity primary key not null, "client_id" bigint not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2016_06_01_000005_create_oauth_personal_access_clients_table, 1]
+
+[2023-12-11 14:20:25]
+create table "failed_jobs" ("id" bigint identity primary key not null, "uuid" nvarchar(191) not null, "connection" nvarchar(max) not null, "queue" nvarchar(max) not null, "payload" nvarchar(max) not null, "exception" nvarchar(max) not null, "failed_at" datetime default CURRENT_TIMESTAMP not null) []
+
+[2023-12-11 14:20:25]
+create unique index "failed_jobs_uuid_unique" on "failed_jobs" ("uuid") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2019_08_19_000000_create_failed_jobs_table, 1]
+
+[2023-12-11 14:20:25]
+create table "personal_access_tokens" ("id" bigint identity primary key not null, "tokenable_type" nvarchar(191) not null, "tokenable_id" bigint not null, "name" nvarchar(191) not null, "token" nvarchar(64) not null, "abilities" nvarchar(max) null, "last_used_at" datetime null, "expires_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create index "personal_access_tokens_tokenable_type_tokenable_id_index" on "personal_access_tokens" ("tokenable_type", "tokenable_id") []
+
+[2023-12-11 14:20:25]
+create unique index "personal_access_tokens_token_unique" on "personal_access_tokens" ("token") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2019_12_14_000001_create_personal_access_tokens_table, 1]
+
+[2023-12-11 14:20:25]
+create table "permissions" ("id" bigint identity primary key not null, "name" nvarchar(191) not null, "guard_name" nvarchar(191) not null, "description" nvarchar(191) not null, "module" nvarchar(191) not null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create unique index "permissions_name_guard_name_unique" on "permissions" ("name", "guard_name") []
+
+[2023-12-11 14:20:25]
+create table "roles" ("id" bigint identity primary key not null, "name" nvarchar(191) not null, "guard_name" nvarchar(191) not null, "is_manager" tinyint not null default '0', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create unique index "roles_name_guard_name_unique" on "roles" ("name", "guard_name") []
+
+[2023-12-11 14:20:25]
+create table "model_has_permissions" ("permission_id" bigint not null, "model_type" nvarchar(191) not null, "model_id" nvarchar(191) not null) []
+
+[2023-12-11 14:20:25]
+create index "model_has_permissions_model_id_model_type_index" on "model_has_permissions" ("model_id", "model_type") []
+
+[2023-12-11 14:20:25]
+alter table "model_has_permissions" add constraint "model_has_permissions_permission_id_foreign" foreign key ("permission_id") references "permissions" ("id") on delete cascade []
+
+[2023-12-11 14:20:25]
+alter table "model_has_permissions" add constraint "model_has_permissions_permission_model_type_primary" primary key ("permission_id", "model_id", "model_type") []
+
+[2023-12-11 14:20:25]
+create table "model_has_roles" ("role_id" bigint not null, "model_type" nvarchar(191) not null, "model_id" nvarchar(191) not null) []
+
+[2023-12-11 14:20:25]
+create index "model_has_roles_model_id_model_type_index" on "model_has_roles" ("model_id", "model_type") []
+
+[2023-12-11 14:20:25]
+alter table "model_has_roles" add constraint "model_has_roles_role_id_foreign" foreign key ("role_id") references "roles" ("id") on delete cascade []
+
+[2023-12-11 14:20:25]
+alter table "model_has_roles" add constraint "model_has_roles_role_model_type_primary" primary key ("role_id", "model_id", "model_type") []
+
+[2023-12-11 14:20:25]
+create table "role_has_permissions" ("permission_id" bigint not null, "role_id" bigint not null) []
+
+[2023-12-11 14:20:25]
+alter table "role_has_permissions" add constraint "role_has_permissions_permission_id_foreign" foreign key ("permission_id") references "permissions" ("id") on delete cascade []
+
+[2023-12-11 14:20:25]
+alter table "role_has_permissions" add constraint "role_has_permissions_role_id_foreign" foreign key ("role_id") references "roles" ("id") on delete cascade []
+
+[2023-12-11 14:20:25]
+alter table "role_has_permissions" add constraint "role_has_permissions_permission_id_role_id_primary" primary key ("permission_id", "role_id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_155234_create_permissions_table, 1]
+
+[2023-12-11 14:20:25]
+create table "ticket_types" ("id" nvarchar(55) not null, "name" nvarchar(255) not null, "type" tinyint not null default '1', "price_online" decimal(9, 2) null, "price_offline" decimal(9, 2) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create unique index "ticket_types_id_unique" on "ticket_types" ("id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160159_create_ticket_types_table, 1]
+
+[2023-12-11 14:20:25]
+create table "areas" ("id" nvarchar(55) not null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create unique index "areas_id_unique" on "areas" ("id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160235_create_areas_table, 1]
+
+[2023-12-11 14:20:25]
+create table "fun_spots" ("id" nvarchar(55) not null, "area_id" nvarchar(55) null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create unique index "fun_spots_id_unique" on "fun_spots" ("id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160752_create_fun_spots_table, 1]
+
+[2023-12-11 14:20:25]
+create table "services" ("id" nvarchar(55) not null, "area_id" nvarchar(55) null, "name" nvarchar(255) not null, "description" nvarchar(max) null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create unique index "services_id_unique" on "services" ("id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160804_create_services_table, 1]
+
+[2023-12-11 14:20:25]
+create table "maps" ("id" nvarchar(55) not null, "ticket_type_id" nvarchar(55) null, "type_id" nvarchar(55) null, "type" int null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:25]
+create unique index "maps_id_unique" on "maps" ("id") []
+
+[2023-12-11 14:20:25]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_160828_create_maps_table, 1]
+
+[2023-12-11 14:20:26]
+create table "device_config" ("device_id" nvarchar(55) not null, "type_id" nvarchar(55) null, "type" tinyint null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:26]
+create unique index "device_config_device_id_unique" on "device_config" ("device_id") []
+
+[2023-12-11 14:20:26]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_161432_create_device_config_table, 1]
+
+[2023-12-11 14:20:26]
+create table "logs" ("id" nvarchar(55) not null, "user_id" nvarchar(55) not null, "model" nvarchar(191) null, "before_action" nvarchar(max) null, "after_action" nvarchar(max) null, "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:26]
+create unique index "logs_id_unique" on "logs" ("id") []
+
+[2023-12-11 14:20:26]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_161449_create_logs_table, 1]
+
+[2023-12-11 14:20:26]
+create table "orders" ("id" nvarchar(55) not null, "created_by" nvarchar(55) not null, "type" tinyint not null default '0', "real_amount" decimal(14, 2) null, "note" nvarchar(255) null, "amount" decimal(14, 2) not null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:26]
+create unique index "orders_id_unique" on "orders" ("id") []
+
+[2023-12-11 14:20:26]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_161607_create_orders_table, 1]
+
+[2023-12-11 14:20:26]
+create table "tickets" ("id" nvarchar(55) not null, "ticket_type_name" nvarchar(55) null, "ticket_type_id" nvarchar(55) not null, "use_date" datetime null, "order_id" nvarchar(55) not null, "qr_code" nvarchar(255) not null, "price" decimal(14, 2) not null, "status" tinyint not null default '1', "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:26]
+create unique index "tickets_id_unique" on "tickets" ("id") []
+
+[2023-12-11 14:20:26]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_16_161655_create_tickets_table, 1]
+
+[2023-12-11 14:20:26]
+create table "events" ("id" nvarchar(55) not null, "ticket_id" nvarchar(55) null, "ticket_type_id" nvarchar(55) null, "order_id" nvarchar(55) not null, "time_in" datetime not null, "note" nvarchar(max) not null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:26]
+create unique index "events_id_unique" on "events" ("id") []
+
+[2023-12-11 14:20:26]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_18_083442_create_events_table, 1]
+
+[2023-12-11 14:20:26]
+create table "configs" ("id" nvarchar(55) not null, "max_individual_ticket" int null, "max_group_ticket" int null, "is_delete" bit not null default '0', "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:26]
+create unique index "configs_id_unique" on "configs" ("id") []
+
+[2023-12-11 14:20:26]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_18_083506_create_configs_table, 1]
+
+[2023-12-11 14:20:26]
+create table "payment_status" ("id" nvarchar(55) not null, "status" tinyint not null default '0', "note" nvarchar(max) null, "order_id" nvarchar(55) not null, "deleted_at" datetime null, "created_at" datetime null, "updated_at" datetime null) []
+
+[2023-12-11 14:20:26]
+create unique index "payment_status_id_unique" on "payment_status" ("id") []
+
+[2023-12-11 14:20:26]
+insert into [migrations] ([migration], [batch]) values (?, ?) [2023_11_18_084147_create_payment_status_table, 1]
+
+[2023-12-11 15:06:33]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 15:06:33]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:06:33]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:06:33]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:06:33]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:06:33]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:06:33]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:06:33]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:06:33]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:06:34]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:06:34]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:21]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:08:21]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:22]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:22]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:22]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:22]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:22]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:22]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:22]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:22]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:30]
+select top 1 * from [users] where [user_name] = ? and [is_delete] = ? and [users].[deleted_at] is null [admin, 0]
+
+[2023-12-11 15:08:30]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:08:30]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:30]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:30]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:30]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:31]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:31]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:31]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:31]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:08:31]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:09:41]
+insert into [oauth_clients] ([user_id], [name], [secret], [provider], [redirect], [personal_access_client], [password_client], [revoked], [updated_at], [created_at]) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [, Laravel Personal Access Client, 88HOFMsaMHJqKLNYt3VxXqlL7mc5R4FqDzwlYcO5, , http://localhost, 1, , , 2023-12-11 15:09:41.274, 2023-12-11 15:09:41.274]
+
+[2023-12-11 15:09:41]
+insert into [oauth_personal_access_clients] ([client_id], [updated_at], [created_at]) values (?, ?, ?) [1, 2023-12-11 15:09:41.583, 2023-12-11 15:09:41.583]
+
+[2023-12-11 15:09:41]
+insert into [oauth_clients] ([user_id], [name], [secret], [provider], [redirect], [personal_access_client], [password_client], [revoked], [updated_at], [created_at]) values (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [, Laravel Password Grant Client, dQ6PPhbO9Krpz6UEd3S7x4HkQA4bT4KpR4jJh3LI, users, http://localhost, , 1, , 2023-12-11 15:09:41.609, 2023-12-11 15:09:41.609]
+
+[2023-12-11 15:09:50]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:09:50]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:09:50]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:09:50]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:09:50]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:09:50]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:09:50]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [df54995c94696a71221e4f708282998bbc65116939f7042ef481c5713612a6eadecd21b150f22753, 1, 1, [], , 2023-12-11 15:09:50.754, 2023-12-11 15:09:50.754, 2024-12-11 15:09:50.754]
+
+[2023-12-11 15:09:50]
+select top 1 * from [oauth_access_tokens] where [id] = ? [df54995c94696a71221e4f708282998bbc65116939f7042ef481c5713612a6eadecd21b150f22753]
+
+[2023-12-11 15:09:50]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:09:50.784, df54995c94696a71221e4f708282998bbc65116939f7042ef481c5713612a6eadecd21b150f22753]
+
+[2023-12-11 15:09:50]
+select * from [permissions] []
+
+[2023-12-11 15:11:00]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:11:00]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:11:00]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:11:00]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:11:00]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:11:00]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:11:00]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [cc5462b3c40fe070468e758a5dff6dc6c407dc6327a5b3eacb9cbce7eee249541bab933b07f0c316, 1, 1, [], , 2023-12-11 15:11:00.710, 2023-12-11 15:11:00.710, 2024-12-11 15:11:00.710]
+
+[2023-12-11 15:11:00]
+select top 1 * from [oauth_access_tokens] where [id] = ? [cc5462b3c40fe070468e758a5dff6dc6c407dc6327a5b3eacb9cbce7eee249541bab933b07f0c316]
+
+[2023-12-11 15:11:00]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:11:00.742, cc5462b3c40fe070468e758a5dff6dc6c407dc6327a5b3eacb9cbce7eee249541bab933b07f0c316]
+
+[2023-12-11 15:11:03]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:11:03]
+select count(*) as aggregate from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:11:03]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:11:03]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:11:03]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:11:03]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:11:03]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:11:03]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [0d314dcaa7cbbb27c6121f0ac7c18b48b97317f786c5b4fb6dd624fd21b0d58a01cd033934e10eb1, 1, 1, [], , 2023-12-11 15:11:03.679, 2023-12-11 15:11:03.679, 2024-12-11 15:11:03.679]
+
+[2023-12-11 15:11:03]
+select top 1 * from [oauth_access_tokens] where [id] = ? [0d314dcaa7cbbb27c6121f0ac7c18b48b97317f786c5b4fb6dd624fd21b0d58a01cd033934e10eb1]
+
+[2023-12-11 15:11:03]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:11:03.713, 0d314dcaa7cbbb27c6121f0ac7c18b48b97317f786c5b4fb6dd624fd21b0d58a01cd033934e10eb1]
+
+[2023-12-11 15:11:46]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:11:46]
+select count(*) as aggregate from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:11:46]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:11:47]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:11:47]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:11:47]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:11:47]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:11:47]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [da14b7cbb85f26e63fe1baf1f64bbc89af48c5324c23f07ae9b8417cc55a7ab2a6b735c6722b9111, 1, 1, [], , 2023-12-11 15:11:47.044, 2023-12-11 15:11:47.044, 2024-12-11 15:11:47.044]
+
+[2023-12-11 15:11:47]
+select top 1 * from [oauth_access_tokens] where [id] = ? [da14b7cbb85f26e63fe1baf1f64bbc89af48c5324c23f07ae9b8417cc55a7ab2a6b735c6722b9111]
+
+[2023-12-11 15:11:47]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:11:47.079, da14b7cbb85f26e63fe1baf1f64bbc89af48c5324c23f07ae9b8417cc55a7ab2a6b735c6722b9111]
+
+[2023-12-11 15:12:07]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:12:07]
+select count(*) as aggregate from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:12:07]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:12:07]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:12:07]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:12:07]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:12:07]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:12:07]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [9edcdac5ea1e1f5a0f7dbba00c3601c97bba75265383f42a8ddb8adb27cbbb944ac75ee4253d81d4, 1, 1, [], , 2023-12-11 15:12:07.662, 2023-12-11 15:12:07.662, 2024-12-11 15:12:07.662]
+
+[2023-12-11 15:12:07]
+select top 1 * from [oauth_access_tokens] where [id] = ? [9edcdac5ea1e1f5a0f7dbba00c3601c97bba75265383f42a8ddb8adb27cbbb944ac75ee4253d81d4]
+
+[2023-12-11 15:12:07]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:12:07.713, 9edcdac5ea1e1f5a0f7dbba00c3601c97bba75265383f42a8ddb8adb27cbbb944ac75ee4253d81d4]
+
+[2023-12-11 15:12:42]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:12:42]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:12:42]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:12:42]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:12:42]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:12:42]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:12:42]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [2e18bbd7dc97062955128f4413de8c5ac40dd5db8e5824a2e127be8797898823962d1dca610ecb29, 1, 1, [], , 2023-12-11 15:12:42.111, 2023-12-11 15:12:42.111, 2024-12-11 15:12:42.111]
+
+[2023-12-11 15:12:42]
+select top 1 * from [oauth_access_tokens] where [id] = ? [2e18bbd7dc97062955128f4413de8c5ac40dd5db8e5824a2e127be8797898823962d1dca610ecb29]
+
+[2023-12-11 15:12:42]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:12:42.139, 2e18bbd7dc97062955128f4413de8c5ac40dd5db8e5824a2e127be8797898823962d1dca610ecb29]
+
+[2023-12-11 15:13:30]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:30]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:30]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:30]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:30]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:30]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:30]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [8703d9187751fe1dc73560f46d770eb0a2ccd2dd76a8eb7aa1d7a32e517fa976cbd84b27bdf74f0d, 1, 1, [], , 2023-12-11 15:13:30.957, 2023-12-11 15:13:30.957, 2024-12-11 15:13:30.957]
+
+[2023-12-11 15:13:30]
+select top 1 * from [oauth_access_tokens] where [id] = ? [8703d9187751fe1dc73560f46d770eb0a2ccd2dd76a8eb7aa1d7a32e517fa976cbd84b27bdf74f0d]
+
+[2023-12-11 15:13:31]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:30.988, 8703d9187751fe1dc73560f46d770eb0a2ccd2dd76a8eb7aa1d7a32e517fa976cbd84b27bdf74f0d]
+
+[2023-12-11 15:13:36]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:36]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:36]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:36]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:36]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:36]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:36]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [c9eb1d38b0279a32f79d6fbd3c8e9eaf7ac2182018fb5e0d158c1d057708ce64c08adf0b3dc3cbe5, 1, 1, [], , 2023-12-11 15:13:36.148, 2023-12-11 15:13:36.148, 2024-12-11 15:13:36.148]
+
+[2023-12-11 15:13:36]
+select top 1 * from [oauth_access_tokens] where [id] = ? [c9eb1d38b0279a32f79d6fbd3c8e9eaf7ac2182018fb5e0d158c1d057708ce64c08adf0b3dc3cbe5]
+
+[2023-12-11 15:13:36]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:36.182, c9eb1d38b0279a32f79d6fbd3c8e9eaf7ac2182018fb5e0d158c1d057708ce64c08adf0b3dc3cbe5]
+
+[2023-12-11 15:13:37]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:37]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:37]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:38]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [65c31c5c23ab35d96bd8ac210573b5815d32c00528aaa9cf11d35eeb801ec2a1419ca7f851c8016c, 1, 1, [], , 2023-12-11 15:13:38.027, 2023-12-11 15:13:38.027, 2024-12-11 15:13:38.027]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_access_tokens] where [id] = ? [65c31c5c23ab35d96bd8ac210573b5815d32c00528aaa9cf11d35eeb801ec2a1419ca7f851c8016c]
+
+[2023-12-11 15:13:38]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:38.055, 65c31c5c23ab35d96bd8ac210573b5815d32c00528aaa9cf11d35eeb801ec2a1419ca7f851c8016c]
+
+[2023-12-11 15:13:38]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:38]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:38]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [ddd05ebfb9aa413ec56347ce24661b5c8edc5157e626988437c1391375b7d5b9d339ba7ef58be861, 1, 1, [], , 2023-12-11 15:13:38.702, 2023-12-11 15:13:38.702, 2024-12-11 15:13:38.702]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_access_tokens] where [id] = ? [ddd05ebfb9aa413ec56347ce24661b5c8edc5157e626988437c1391375b7d5b9d339ba7ef58be861]
+
+[2023-12-11 15:13:38]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:38.731, ddd05ebfb9aa413ec56347ce24661b5c8edc5157e626988437c1391375b7d5b9d339ba7ef58be861]
+
+[2023-12-11 15:13:38]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:38]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:38]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [9d6f237e4dede15f7c02d1071d093af17244451233a9ed8b0ac60643e5759d767a4c227348509442, 1, 1, [], , 2023-12-11 15:13:38.916, 2023-12-11 15:13:38.916, 2024-12-11 15:13:38.916]
+
+[2023-12-11 15:13:38]
+select top 1 * from [oauth_access_tokens] where [id] = ? [9d6f237e4dede15f7c02d1071d093af17244451233a9ed8b0ac60643e5759d767a4c227348509442]
+
+[2023-12-11 15:13:38]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:38.945, 9d6f237e4dede15f7c02d1071d093af17244451233a9ed8b0ac60643e5759d767a4c227348509442]
+
+[2023-12-11 15:13:39]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:39]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:39]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:39]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:39]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:39]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:39]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [d48ca74de509c65fdc662256e8dd4168d55a2ceadd5af266918e15bdf332f2a7a0412cece1a1ec29, 1, 1, [], , 2023-12-11 15:13:39.618, 2023-12-11 15:13:39.618, 2024-12-11 15:13:39.618]
+
+[2023-12-11 15:13:39]
+select top 1 * from [oauth_access_tokens] where [id] = ? [d48ca74de509c65fdc662256e8dd4168d55a2ceadd5af266918e15bdf332f2a7a0412cece1a1ec29]
+
+[2023-12-11 15:13:39]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:39.646, d48ca74de509c65fdc662256e8dd4168d55a2ceadd5af266918e15bdf332f2a7a0412cece1a1ec29]
+
+[2023-12-11 15:13:43]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:43]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:43]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:43]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:43]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:43]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:43]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [9ca00a1c14558d92c6ff7792e34cdf9f091fa047a9f3c5a80282c4320b8d1879a1a0a253ee6daf0b, 1, 1, [], , 2023-12-11 15:13:43.195, 2023-12-11 15:13:43.195, 2024-12-11 15:13:43.195]
+
+[2023-12-11 15:13:43]
+select top 1 * from [oauth_access_tokens] where [id] = ? [9ca00a1c14558d92c6ff7792e34cdf9f091fa047a9f3c5a80282c4320b8d1879a1a0a253ee6daf0b]
+
+[2023-12-11 15:13:43]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:43.224, 9ca00a1c14558d92c6ff7792e34cdf9f091fa047a9f3c5a80282c4320b8d1879a1a0a253ee6daf0b]
+
+[2023-12-11 15:13:44]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:44]
+select count(*) as aggregate from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:13:44]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:44]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:44]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:44]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:44]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:45]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [77f78dcb97c4dfa20df17043f59aed30dbddbf49e3f01b7c3ad8616cde5f05596f5f0c5d3f934068, 1, 1, [], , 2023-12-11 15:13:44.991, 2023-12-11 15:13:44.991, 2024-12-11 15:13:44.991]
+
+[2023-12-11 15:13:45]
+select top 1 * from [oauth_access_tokens] where [id] = ? [77f78dcb97c4dfa20df17043f59aed30dbddbf49e3f01b7c3ad8616cde5f05596f5f0c5d3f934068]
+
+[2023-12-11 15:13:45]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:45.022, 77f78dcb97c4dfa20df17043f59aed30dbddbf49e3f01b7c3ad8616cde5f05596f5f0c5d3f934068]
+
+[2023-12-11 15:13:46]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:46]
+select count(*) as aggregate from [fun_spots] where [is_delete] = ? and [fun_spots].[deleted_at] is null [0]
+
+[2023-12-11 15:13:46]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:46]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:46]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:46]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:46]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:46]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [d2e81484d3a8af43fe338e4ddc9ce1a45932d864801d8a5f5651fa133057ab8308294ac7387ca6e6, 1, 1, [], , 2023-12-11 15:13:46.855, 2023-12-11 15:13:46.855, 2024-12-11 15:13:46.855]
+
+[2023-12-11 15:13:46]
+select top 1 * from [oauth_access_tokens] where [id] = ? [d2e81484d3a8af43fe338e4ddc9ce1a45932d864801d8a5f5651fa133057ab8308294ac7387ca6e6]
+
+[2023-12-11 15:13:46]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:46.888, d2e81484d3a8af43fe338e4ddc9ce1a45932d864801d8a5f5651fa133057ab8308294ac7387ca6e6]
+
+[2023-12-11 15:13:47]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:47]
+select count(*) as aggregate from [services] where [is_delete] = ? and [services].[deleted_at] is null [0]
+
+[2023-12-11 15:13:47]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:47]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:47]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:47]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:47]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:47]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [67a53be6028bddccd8e5b86e2a45459763be64f3e7aef9016213fc7907767d748e24235b719e44af, 1, 1, [], , 2023-12-11 15:13:47.771, 2023-12-11 15:13:47.771, 2024-12-11 15:13:47.770]
+
+[2023-12-11 15:13:47]
+select top 1 * from [oauth_access_tokens] where [id] = ? [67a53be6028bddccd8e5b86e2a45459763be64f3e7aef9016213fc7907767d748e24235b719e44af]
+
+[2023-12-11 15:13:47]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:47.799, 67a53be6028bddccd8e5b86e2a45459763be64f3e7aef9016213fc7907767d748e24235b719e44af]
+
+[2023-12-11 15:13:48]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:48]
+select count(*) as aggregate from [tickets] where [is_delete] = ? and [tickets].[deleted_at] is null [0]
+
+[2023-12-11 15:13:48]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:48]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:48]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:48]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:49]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:49]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [38fed650d409daa93a6f26db520b12b3bc27046e15c6ee3a734e59ba28f6f31567814febc9ae0eb7, 1, 1, [], , 2023-12-11 15:13:49.006, 2023-12-11 15:13:49.006, 2024-12-11 15:13:49.006]
+
+[2023-12-11 15:13:49]
+select top 1 * from [oauth_access_tokens] where [id] = ? [38fed650d409daa93a6f26db520b12b3bc27046e15c6ee3a734e59ba28f6f31567814febc9ae0eb7]
+
+[2023-12-11 15:13:49]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:49.044, 38fed650d409daa93a6f26db520b12b3bc27046e15c6ee3a734e59ba28f6f31567814febc9ae0eb7]
+
+[2023-12-11 15:13:55]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:56]
+select count(*) as aggregate from [tickets] where [is_delete] = ? and [tickets].[deleted_at] is null [0]
+
+[2023-12-11 15:13:56]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:56]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:56]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:56]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:56]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:56]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [580073c1ae621356f1d69c2fa2835220c43315feff9dec50363b8506ecc759c9d18ef6664c3b1e7b, 1, 1, [], , 2023-12-11 15:13:56.222, 2023-12-11 15:13:56.222, 2024-12-11 15:13:56.222]
+
+[2023-12-11 15:13:56]
+select top 1 * from [oauth_access_tokens] where [id] = ? [580073c1ae621356f1d69c2fa2835220c43315feff9dec50363b8506ecc759c9d18ef6664c3b1e7b]
+
+[2023-12-11 15:13:56]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:56.307, 580073c1ae621356f1d69c2fa2835220c43315feff9dec50363b8506ecc759c9d18ef6664c3b1e7b]
+
+[2023-12-11 15:13:58]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:13:59]
+select count(*) as aggregate from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:13:59]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:13:59]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:13:59]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:13:59]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:59]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:13:59]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [184378bb1ae93beb351a5c7e582c041e46b7af89c3d054b67b7165e7ba560455ec27df06be198a07, 1, 1, [], , 2023-12-11 15:13:59.242, 2023-12-11 15:13:59.242, 2024-12-11 15:13:59.242]
+
+[2023-12-11 15:13:59]
+select top 1 * from [oauth_access_tokens] where [id] = ? [184378bb1ae93beb351a5c7e582c041e46b7af89c3d054b67b7165e7ba560455ec27df06be198a07]
+
+[2023-12-11 15:13:59]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:13:59.331, 184378bb1ae93beb351a5c7e582c041e46b7af89c3d054b67b7165e7ba560455ec27df06be198a07]
+
+[2023-12-11 15:14:00]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:00]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:00]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:00]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:00]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:00]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:00]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [67a809347fa69680a009969f9db56acdb7fadc7237e61ce18f79486b09ebd6a69daad216c57eb79c, 1, 1, [], , 2023-12-11 15:14:00.592, 2023-12-11 15:14:00.592, 2024-12-11 15:14:00.592]
+
+[2023-12-11 15:14:00]
+select top 1 * from [oauth_access_tokens] where [id] = ? [67a809347fa69680a009969f9db56acdb7fadc7237e61ce18f79486b09ebd6a69daad216c57eb79c]
+
+[2023-12-11 15:14:00]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:00.677, 67a809347fa69680a009969f9db56acdb7fadc7237e61ce18f79486b09ebd6a69daad216c57eb79c]
+
+[2023-12-11 15:14:05]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:05]
+insert into [areas] ([id], [name], [description], [status], [updated_at], [created_at]) values (?, ?, ?, ?, ?, ?) [CC0F379A-F46E-E206-17A2-EB36E2E93CF8, Hệ thống quảng cáo Kztek, sfsfasdfa, 1, 2023-12-11 15:14:05.650, 2023-12-11 15:14:05.650]
+
+[2023-12-11 15:14:05]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:05]
+select count(*) as aggregate from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:14:06]
+select top 20 [id], [name], [description], [status], [is_delete], [created_at], [updated_at] from [areas] where [is_delete] = ? and [areas].[deleted_at] is null order by [updated_at] desc [0]
+
+[2023-12-11 15:14:06]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:06]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:06]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:06]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:06]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:06]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [e31c43a2d6dd8dd8fba9c894b758b2f7120e1a00f9e6c7f0c71c928759a1baf2821e4bf457609bea, 1, 1, [], , 2023-12-11 15:14:06.271, 2023-12-11 15:14:06.271, 2024-12-11 15:14:06.271]
+
+[2023-12-11 15:14:06]
+select top 1 * from [oauth_access_tokens] where [id] = ? [e31c43a2d6dd8dd8fba9c894b758b2f7120e1a00f9e6c7f0c71c928759a1baf2821e4bf457609bea]
+
+[2023-12-11 15:14:06]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:06.326, e31c43a2d6dd8dd8fba9c894b758b2f7120e1a00f9e6c7f0c71c928759a1baf2821e4bf457609bea]
+
+[2023-12-11 15:14:09]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:09]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:09]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:09]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:09]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:09]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:09]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [a75e00268d70561f8a58e708f4864e2fade1340e8cb22088e3cdb7b83228bde77b94e144372c1060, 1, 1, [], , 2023-12-11 15:14:09.655, 2023-12-11 15:14:09.655, 2024-12-11 15:14:09.655]
+
+[2023-12-11 15:14:09]
+select top 1 * from [oauth_access_tokens] where [id] = ? [a75e00268d70561f8a58e708f4864e2fade1340e8cb22088e3cdb7b83228bde77b94e144372c1060]
+
+[2023-12-11 15:14:09]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:09.685, a75e00268d70561f8a58e708f4864e2fade1340e8cb22088e3cdb7b83228bde77b94e144372c1060]
+
+[2023-12-11 15:14:11]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:11]
+select count(*) as aggregate from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:14:11]
+select top 20 [id], [name], [description], [status], [is_delete], [created_at], [updated_at] from [areas] where [is_delete] = ? and [areas].[deleted_at] is null order by [updated_at] desc [0]
+
+[2023-12-11 15:14:11]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:11]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [2bb699ec9ebdeda822631dd7ea2419396ca05eced58a0239414a3ebc755cf5b7bb62a3fbc35c60a3, 1, 1, [], , 2023-12-11 15:14:11.158, 2023-12-11 15:14:11.158, 2024-12-11 15:14:11.158]
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_access_tokens] where [id] = ? [2bb699ec9ebdeda822631dd7ea2419396ca05eced58a0239414a3ebc755cf5b7bb62a3fbc35c60a3]
+
+[2023-12-11 15:14:11]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:11.214, 2bb699ec9ebdeda822631dd7ea2419396ca05eced58a0239414a3ebc755cf5b7bb62a3fbc35c60a3]
+
+[2023-12-11 15:14:11]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:11]
+select count(*) as aggregate from [fun_spots] where [is_delete] = ? and [fun_spots].[deleted_at] is null [0]
+
+[2023-12-11 15:14:11]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:11]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [a8ed8de33840a3299059ca46b16fefce13d691fce9b735ce251214feb4d1d0667ae79304636166f1, 1, 1, [], , 2023-12-11 15:14:11.935, 2023-12-11 15:14:11.935, 2024-12-11 15:14:11.935]
+
+[2023-12-11 15:14:11]
+select top 1 * from [oauth_access_tokens] where [id] = ? [a8ed8de33840a3299059ca46b16fefce13d691fce9b735ce251214feb4d1d0667ae79304636166f1]
+
+[2023-12-11 15:14:11]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:11.964, a8ed8de33840a3299059ca46b16fefce13d691fce9b735ce251214feb4d1d0667ae79304636166f1]
+
+[2023-12-11 15:14:13]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:13]
+select * from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:14:13]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:13]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:13]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:13]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:13]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:13]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [76109572b73bd63728e1752490b0b300e9aa3b93f34ea033577b2ac6429e7c8863a8774c811b2d9f, 1, 1, [], , 2023-12-11 15:14:13.492, 2023-12-11 15:14:13.492, 2024-12-11 15:14:13.492]
+
+[2023-12-11 15:14:13]
+select top 1 * from [oauth_access_tokens] where [id] = ? [76109572b73bd63728e1752490b0b300e9aa3b93f34ea033577b2ac6429e7c8863a8774c811b2d9f]
+
+[2023-12-11 15:14:13]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:13.522, 76109572b73bd63728e1752490b0b300e9aa3b93f34ea033577b2ac6429e7c8863a8774c811b2d9f]
+
+[2023-12-11 15:14:23]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:23]
+insert into [fun_spots] ([id], [name], [area_id], [description], [status], [updated_at], [created_at]) values (?, ?, ?, ?, ?, ?, ?) [DC47C9D3-D985-8B6A-8959-77FA7AE751FF, sdfsfasd, CC0F379A-F46E-E206-17A2-EB36E2E93CF8, , 1, 2023-12-11 15:14:23.461, 2023-12-11 15:14:23.461]
+
+[2023-12-11 15:14:23]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:23]
+select count(*) as aggregate from [fun_spots] where [is_delete] = ? and [fun_spots].[deleted_at] is null [0]
+
+[2023-12-11 15:14:23]
+select top 20 [id], [area_id], [name], [description], [status], [is_delete], [created_at], [updated_at] from [fun_spots] where [is_delete] = ? and [fun_spots].[deleted_at] is null order by [updated_at] desc [0]
+
+[2023-12-11 15:14:23]
+select top 1 * from [areas] where [areas].[id] = ? and [areas].[deleted_at] is null [CC0F379A-F46E-E206-17A2-EB36E2E93CF8]
+
+[2023-12-11 15:14:23]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:23]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:23]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:23]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:23]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:23]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [86b8b90f9adb540f98e3aeff11332345b42cd4d0f3d47b7a030dd3f1aa48ae85cd2338c2e9481fe1, 1, 1, [], , 2023-12-11 15:14:23.800, 2023-12-11 15:14:23.800, 2024-12-11 15:14:23.800]
+
+[2023-12-11 15:14:23]
+select top 1 * from [oauth_access_tokens] where [id] = ? [86b8b90f9adb540f98e3aeff11332345b42cd4d0f3d47b7a030dd3f1aa48ae85cd2338c2e9481fe1]
+
+[2023-12-11 15:14:23]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:23.856, 86b8b90f9adb540f98e3aeff11332345b42cd4d0f3d47b7a030dd3f1aa48ae85cd2338c2e9481fe1]
+
+[2023-12-11 15:14:25]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:25]
+select count(*) as aggregate from [tickets] where [is_delete] = ? and [tickets].[deleted_at] is null [0]
+
+[2023-12-11 15:14:25]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:25]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:25]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:25]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:25]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:25]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [a89725d761990bc4636154fc340570d71ddbb94bf49d687d895718dc10149e64d3dee4a94ba8bf34, 1, 1, [], , 2023-12-11 15:14:25.717, 2023-12-11 15:14:25.717, 2024-12-11 15:14:25.717]
+
+[2023-12-11 15:14:25]
+select top 1 * from [oauth_access_tokens] where [id] = ? [a89725d761990bc4636154fc340570d71ddbb94bf49d687d895718dc10149e64d3dee4a94ba8bf34]
+
+[2023-12-11 15:14:25]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:25.746, a89725d761990bc4636154fc340570d71ddbb94bf49d687d895718dc10149e64d3dee4a94ba8bf34]
+
+[2023-12-11 15:14:28]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:28]
+select count(*) as aggregate from [ticket_types] where [is_delete] = ? and [ticket_types].[deleted_at] is null [0]
+
+[2023-12-11 15:14:28]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:28]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:28]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:28]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:28]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:28]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [91bd1231a6a137ab7624fe7c6eb166b64025789b42b593f7cf521fd94f03d2d764d23df7d799ddda, 1, 1, [], , 2023-12-11 15:14:28.585, 2023-12-11 15:14:28.585, 2024-12-11 15:14:28.585]
+
+[2023-12-11 15:14:28]
+select top 1 * from [oauth_access_tokens] where [id] = ? [91bd1231a6a137ab7624fe7c6eb166b64025789b42b593f7cf521fd94f03d2d764d23df7d799ddda]
+
+[2023-12-11 15:14:28]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:28.613, 91bd1231a6a137ab7624fe7c6eb166b64025789b42b593f7cf521fd94f03d2d764d23df7d799ddda]
+
+[2023-12-11 15:14:29]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:29]
+select * from [maps] where [is_delete] = ? and [maps].[deleted_at] is null [0]
+
+[2023-12-11 15:14:29]
+select * from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:14:29]
+select * from [maps] where [is_delete] = ? and [maps].[deleted_at] is null [0]
+
+[2023-12-11 15:14:29]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:29]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:29]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:29]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:29]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:29]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [98b9bc597b0135854adb525ed80fe9d452bba2fc5190f6149fc9c43adfd30bda26d2e052b00f135a, 1, 1, [], , 2023-12-11 15:14:29.917, 2023-12-11 15:14:29.917, 2024-12-11 15:14:29.917]
+
+[2023-12-11 15:14:29]
+select top 1 * from [oauth_access_tokens] where [id] = ? [98b9bc597b0135854adb525ed80fe9d452bba2fc5190f6149fc9c43adfd30bda26d2e052b00f135a]
+
+[2023-12-11 15:14:29]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:29.946, 98b9bc597b0135854adb525ed80fe9d452bba2fc5190f6149fc9c43adfd30bda26d2e052b00f135a]
+
+[2023-12-11 15:14:32]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:41]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:41]
+select count(*) as aggregate from [ticket_types] where [is_delete] = ? and [ticket_types].[deleted_at] is null [0]
+
+[2023-12-11 15:14:41]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:41]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:41]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:41]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:41]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:41]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [ca899b004adc3eebcded5a0fdcb2562c04278a5be33739383421c856dbd5de13824c6973478782b0, 1, 1, [], , 2023-12-11 15:14:41.921, 2023-12-11 15:14:41.921, 2024-12-11 15:14:41.921]
+
+[2023-12-11 15:14:41]
+select top 1 * from [oauth_access_tokens] where [id] = ? [ca899b004adc3eebcded5a0fdcb2562c04278a5be33739383421c856dbd5de13824c6973478782b0]
+
+[2023-12-11 15:14:41]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:41.950, ca899b004adc3eebcded5a0fdcb2562c04278a5be33739383421c856dbd5de13824c6973478782b0]
+
+[2023-12-11 15:14:43]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:43]
+select count(*) as aggregate from [ticket_types] where [is_delete] = ? and [ticket_types].[deleted_at] is null [0]
+
+[2023-12-11 15:14:43]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:43]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:43]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:43]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:43]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:43]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [1b59c92bfc22c00ce8ff2f063a8acd3af926a422a5315adaaeb5fa6b163e449d472c82c94558eda5, 1, 1, [], , 2023-12-11 15:14:43.357, 2023-12-11 15:14:43.357, 2024-12-11 15:14:43.357]
+
+[2023-12-11 15:14:43]
+select top 1 * from [oauth_access_tokens] where [id] = ? [1b59c92bfc22c00ce8ff2f063a8acd3af926a422a5315adaaeb5fa6b163e449d472c82c94558eda5]
+
+[2023-12-11 15:14:43]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:43.385, 1b59c92bfc22c00ce8ff2f063a8acd3af926a422a5315adaaeb5fa6b163e449d472c82c94558eda5]
+
+[2023-12-11 15:14:44]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:14:44]
+select * from [maps] where [is_delete] = ? and [maps].[deleted_at] is null [0]
+
+[2023-12-11 15:14:44]
+select * from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:14:44]
+select * from [maps] where [is_delete] = ? and [maps].[deleted_at] is null [0]
+
+[2023-12-11 15:14:44]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:14:44]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:14:44]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:14:44]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:44]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:14:44]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [38ab6d68234afd92ee824d165ec26ad58cd8e35d1f6280dde62bd302b732bbd06f479d141918baca, 1, 1, [], , 2023-12-11 15:14:44.578, 2023-12-11 15:14:44.578, 2024-12-11 15:14:44.578]
+
+[2023-12-11 15:14:44]
+select top 1 * from [oauth_access_tokens] where [id] = ? [38ab6d68234afd92ee824d165ec26ad58cd8e35d1f6280dde62bd302b732bbd06f479d141918baca]
+
+[2023-12-11 15:14:44]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:14:44.610, 38ab6d68234afd92ee824d165ec26ad58cd8e35d1f6280dde62bd302b732bbd06f479d141918baca]
+
+[2023-12-11 15:14:47]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:15:57]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:15:57]
+select * from [maps] where [is_delete] = ? and [maps].[deleted_at] is null [0]
+
+[2023-12-11 15:15:57]
+select * from [areas] where [is_delete] = ? and [areas].[deleted_at] is null [0]
+
+[2023-12-11 15:15:57]
+select * from [maps] where [is_delete] = ? and [maps].[deleted_at] is null [0]
+
+[2023-12-11 15:15:57]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-12-11 15:15:57]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-12-11 15:15:57]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [1]
+
+[2023-12-11 15:15:57]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:15:57]
+select top 1 * from [oauth_clients] where [id] = ? [1]
+
+[2023-12-11 15:15:57]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [0c7c012e6ab00ccad3a1209285f0dcb3c3446db830dc37d92729abcaa91b40e55cf6897015bd2f82, 1, 1, [], , 2023-12-11 15:15:57.469, 2023-12-11 15:15:57.469, 2024-12-11 15:15:57.469]
+
+[2023-12-11 15:15:57]
+select top 1 * from [oauth_access_tokens] where [id] = ? [0c7c012e6ab00ccad3a1209285f0dcb3c3446db830dc37d92729abcaa91b40e55cf6897015bd2f82]
+
+[2023-12-11 15:15:57]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [bao-tang-vu-tru, 2023-12-11 15:15:57.496, 0c7c012e6ab00ccad3a1209285f0dcb3c3446db830dc37d92729abcaa91b40e55cf6897015bd2f82]
+
+[2023-12-11 15:15:58]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:15:59]
+select * from [areas] where [areas].[id] in (?) [CC0F379A-F46E-E206-17A2-EB36E2E93CF8]
+
+[2023-12-11 15:15:59]
+select * from [services] where [is_delete] = ? and [area_id] = ? and [status] = ? and [services].[deleted_at] is null [0, CC0F379A-F46E-E206-17A2-EB36E2E93CF8, 1]
+
+[2023-12-11 15:15:59]
+select * from [fun_spots] where [is_delete] = ? and [area_id] = ? and [status] = ? and [fun_spots].[deleted_at] is null [0, CC0F379A-F46E-E206-17A2-EB36E2E93CF8, 1]
+
+[2023-12-11 15:15:59]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+
+[2023-12-11 15:15:59]
+select top 1 * from [users] where [id] = ? and [users].[deleted_at] is null [1]
+

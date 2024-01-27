@@ -1,0 +1,3348 @@
+[2023-11-06 15:13:49]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:13:49]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:13:49]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:13:49]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:13:49]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:13:49]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:13:49]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:13:49]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:13:49]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [3e0d96ce0b69aaf2ac0f6384a4c38c254d791c5ebddfa5203f17aa69857f92569105056460c11011, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:13:49.235, 2023-11-06 15:13:49.235, 2024-11-06 15:13:49.235]
+
+[2023-11-06 15:13:49]
+select top 1 * from [oauth_access_tokens] where [id] = ? [3e0d96ce0b69aaf2ac0f6384a4c38c254d791c5ebddfa5203f17aa69857f92569105056460c11011]
+
+[2023-11-06 15:13:49]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:13:49.269, 3e0d96ce0b69aaf2ac0f6384a4c38c254d791c5ebddfa5203f17aa69857f92569105056460c11011]
+
+[2023-11-06 15:14:37]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:15:16]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:15:16]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:15:16]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:15:16]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:15:16]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:15:16]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:15:16]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:15:16]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:15:16]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [f0256e03e398db4376e3184741c19fa3a1c0f77a7a7dbcba922e2a091bcc857a2361fe4262c52183, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:15:16.839, 2023-11-06 15:15:16.839, 2024-11-06 15:15:16.839]
+
+[2023-11-06 15:15:16]
+select top 1 * from [oauth_access_tokens] where [id] = ? [f0256e03e398db4376e3184741c19fa3a1c0f77a7a7dbcba922e2a091bcc857a2361fe4262c52183]
+
+[2023-11-06 15:15:16]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:15:16.865, f0256e03e398db4376e3184741c19fa3a1c0f77a7a7dbcba922e2a091bcc857a2361fe4262c52183]
+
+[2023-11-06 15:15:32]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:15:36]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:15:36]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:15:36]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:15:36]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:15:36]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:15:36]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:15:36]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:15:36]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:15:36]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [c68968e502eb2e8abe1a58f606f0fc39afbe6fbb0252f87f8d924bafd70f17268863df186c755df0, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:15:36.651, 2023-11-06 15:15:36.651, 2024-11-06 15:15:36.651]
+
+[2023-11-06 15:15:36]
+select top 1 * from [oauth_access_tokens] where [id] = ? [c68968e502eb2e8abe1a58f606f0fc39afbe6fbb0252f87f8d924bafd70f17268863df186c755df0]
+
+[2023-11-06 15:15:36]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:15:36.678, c68968e502eb2e8abe1a58f606f0fc39afbe6fbb0252f87f8d924bafd70f17268863df186c755df0]
+
+[2023-11-06 15:16:28]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:16:44]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:16:44]
+select top 1 * from [user] where [is_delete] = ? and [user].[id] = ? and [user].[deleted_at] is null [0, 476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:17:29]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:17:30]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:17:30]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:17:30]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:17:30]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:17:31]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:17:31]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:17:31]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:17:31]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:17:31]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [51973023f39c98e2742d0ae96225b7812125aee5792f98570cd3d2939d4a5d1b5c3b7c5d7ce718cc, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:17:31.032, 2023-11-06 15:17:31.032, 2024-11-06 15:17:31.032]
+
+[2023-11-06 15:17:31]
+select top 1 * from [oauth_access_tokens] where [id] = ? [51973023f39c98e2742d0ae96225b7812125aee5792f98570cd3d2939d4a5d1b5c3b7c5d7ce718cc]
+
+[2023-11-06 15:17:31]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:17:31.059, 51973023f39c98e2742d0ae96225b7812125aee5792f98570cd3d2939d4a5d1b5c3b7c5d7ce718cc]
+
+[2023-11-06 15:22:21]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-06 15:22:37]
+select top 1 * from [user] where [user_name] = ? and [is_delete] = ? and [user].[deleted_at] is null [hoangduong, 0]
+
+[2023-11-06 15:22:38]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:22:44]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:22:44]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:22:44]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:22:44]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:22:44]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:22:44]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:22:44]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:22:44]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:22:44]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [ad0d08b02e030f425922cd2a785174be5701b5aaf04277836ec421d6e484bf7650a48d81c8d56614, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:22:44.242, 2023-11-06 15:22:44.242, 2024-11-06 15:22:44.242]
+
+[2023-11-06 15:22:44]
+select top 1 * from [oauth_access_tokens] where [id] = ? [ad0d08b02e030f425922cd2a785174be5701b5aaf04277836ec421d6e484bf7650a48d81c8d56614]
+
+[2023-11-06 15:22:44]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:22:44.274, ad0d08b02e030f425922cd2a785174be5701b5aaf04277836ec421d6e484bf7650a48d81c8d56614]
+
+[2023-11-06 15:25:26]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:25:26]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:25:26]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:25:26]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:25:26]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:25:26]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:25:26]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:26]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:26]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [76a3eb5b6917277a738a0f20ead08b7a464c58f20d4ba41788140658812e27f31e3e6d1f8b93002c, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:25:26.272, 2023-11-06 15:25:26.272, 2024-11-06 15:25:26.272]
+
+[2023-11-06 15:25:26]
+select top 1 * from [oauth_access_tokens] where [id] = ? [76a3eb5b6917277a738a0f20ead08b7a464c58f20d4ba41788140658812e27f31e3e6d1f8b93002c]
+
+[2023-11-06 15:25:26]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:25:26.299, 76a3eb5b6917277a738a0f20ead08b7a464c58f20d4ba41788140658812e27f31e3e6d1f8b93002c]
+
+[2023-11-06 15:25:37]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:25:37]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:25:37]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:25:37]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:25:37]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:25:37]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:25:37]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:37]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:37]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [d85edd47bf898e0f829d50976da3cfc5fad397cc21a0ee25bafcafad68d842158376c5d45febbaf5, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:25:37.483, 2023-11-06 15:25:37.483, 2024-11-06 15:25:37.483]
+
+[2023-11-06 15:25:37]
+select top 1 * from [oauth_access_tokens] where [id] = ? [d85edd47bf898e0f829d50976da3cfc5fad397cc21a0ee25bafcafad68d842158376c5d45febbaf5]
+
+[2023-11-06 15:25:37]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:25:37.508, d85edd47bf898e0f829d50976da3cfc5fad397cc21a0ee25bafcafad68d842158376c5d45febbaf5]
+
+[2023-11-06 15:25:38]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:25:38]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:25:38]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:25:38]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:25:38]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:25:38]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:25:38]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:38]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:38]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [9d029a8a278670e894f00a09d3f1390da61907067f0b776f1822a82183e6101dd1a2efc564641feb, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:25:38.399, 2023-11-06 15:25:38.399, 2024-11-06 15:25:38.399]
+
+[2023-11-06 15:25:38]
+select top 1 * from [oauth_access_tokens] where [id] = ? [9d029a8a278670e894f00a09d3f1390da61907067f0b776f1822a82183e6101dd1a2efc564641feb]
+
+[2023-11-06 15:25:38]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:25:38.425, 9d029a8a278670e894f00a09d3f1390da61907067f0b776f1822a82183e6101dd1a2efc564641feb]
+
+[2023-11-06 15:25:39]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:25:39]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:25:39]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:25:39]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:39]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [a5d608383c553bb3f65799573604600ea7366dffd58d1d5277a82c26edaef151ab9c7846823ff513, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:25:39.138, 2023-11-06 15:25:39.138, 2024-11-06 15:25:39.138]
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_access_tokens] where [id] = ? [a5d608383c553bb3f65799573604600ea7366dffd58d1d5277a82c26edaef151ab9c7846823ff513]
+
+[2023-11-06 15:25:39]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:25:39.164, a5d608383c553bb3f65799573604600ea7366dffd58d1d5277a82c26edaef151ab9c7846823ff513]
+
+[2023-11-06 15:25:39]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:25:39]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:25:39]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:25:39]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:39]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [4b1f7b528e0faebbd19f7e474082e3fbda6761f56d6ffa562f5cf50fd849503397e62878d054d642, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:25:39.817, 2023-11-06 15:25:39.817, 2024-11-06 15:25:39.817]
+
+[2023-11-06 15:25:39]
+select top 1 * from [oauth_access_tokens] where [id] = ? [4b1f7b528e0faebbd19f7e474082e3fbda6761f56d6ffa562f5cf50fd849503397e62878d054d642]
+
+[2023-11-06 15:25:39]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:25:39.842, 4b1f7b528e0faebbd19f7e474082e3fbda6761f56d6ffa562f5cf50fd849503397e62878d054d642]
+
+[2023-11-06 15:25:53]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:25:53]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:25:53]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:25:53]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:25:53]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:25:53]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:25:53]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:53]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:25:53]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [14b796aa674e631773be7177e5a635f5fc734fc9ef24192ee7b52c209bef1640478cf034f8045eca, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:25:53.150, 2023-11-06 15:25:53.150, 2024-11-06 15:25:53.150]
+
+[2023-11-06 15:25:53]
+select top 1 * from [oauth_access_tokens] where [id] = ? [14b796aa674e631773be7177e5a635f5fc734fc9ef24192ee7b52c209bef1640478cf034f8045eca]
+
+[2023-11-06 15:25:53]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:25:53.174, 14b796aa674e631773be7177e5a635f5fc734fc9ef24192ee7b52c209bef1640478cf034f8045eca]
+
+[2023-11-06 15:27:15]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 15:27:15]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 15:27:15]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:27:15]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:27:15]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:27:15]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:27:15]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:27:15]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:27:15]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [5df5f518f36c8bb39d76c9fc255b288dc42a3df2b66e0ae047beced3ee5c561def35ef9fc089605f, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 15:27:15.873, 2023-11-06 15:27:15.873, 2024-11-06 15:27:15.873]
+
+[2023-11-06 15:27:15]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5df5f518f36c8bb39d76c9fc255b288dc42a3df2b66e0ae047beced3ee5c561def35ef9fc089605f]
+
+[2023-11-06 15:27:15]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:27:15.897, 5df5f518f36c8bb39d76c9fc255b288dc42a3df2b66e0ae047beced3ee5c561def35ef9fc089605f]
+
+[2023-11-06 15:27:56]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:35:49]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:35:52]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 15:35:52]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-06 15:35:56]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-06 15:35:56]
+select top 1 * from [user] where [user_name] = ? and [is_delete] = ? and [user].[deleted_at] is null [admin, 0]
+
+[2023-11-06 15:35:56]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:35:56]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-06 15:35:56]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:35:56]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-06 15:35:56]
+select * from [tbl_staff] where [is_delete] = ? [0]
+
+[2023-11-06 15:35:56]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [created_at] >= ? and [created_at] <= ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:35:56]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [42492003-95C4-6C60-71DC-D944578E0AAB, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-06 15:35:57]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [eat_date] >= ? and [eat_date] <= ? and exists (select * from [tbl_staff] where [tbl_register_eat_detail].[staff_id] = [tbl_staff].[id] and [company_id] in (?, ?, ?, ?)) and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:35:57]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:35:57]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:35:57]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:35:57]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:35:57]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:35:57]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [ca3049c96743d9791efa9585cf5f91989c72b6259a055c9dc5322dd8d2d156185c101cfca2ea49de, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 15:35:57.074, 2023-11-06 15:35:57.074, 2024-11-06 15:35:57.074]
+
+[2023-11-06 15:35:57]
+select top 1 * from [oauth_access_tokens] where [id] = ? [ca3049c96743d9791efa9585cf5f91989c72b6259a055c9dc5322dd8d2d156185c101cfca2ea49de]
+
+[2023-11-06 15:35:57]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:35:57.099, ca3049c96743d9791efa9585cf5f91989c72b6259a055c9dc5322dd8d2d156185c101cfca2ea49de]
+
+[2023-11-06 15:35:57]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:35:57]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:35:57]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:35:57]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [eat_date] >= ? and [eat_date] <= ? and [is_use] = ? and exists (select * from [tbl_staff] where [tbl_register_eat_detail].[staff_id] = [tbl_staff].[id] and [company_id] in (?, ?, ?, ?)) and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 1, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:35:57]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [created_at] >= ? and [created_at] <= ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:35:57]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:35:57]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:35:57]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [created_at] >= ? and [created_at] <= ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:35:57]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [42492003-95C4-6C60-71DC-D944578E0AAB, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-06 15:38:02]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:38:02]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:38:02]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:38:02]
+select * from [tbl_staff] where ([is_delete] = ? and [type] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:38:02]
+select * from [tbl_company] where ([deleted_at] is null and [type] = ?) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:38:02]
+select count(*) as aggregate from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:38:02]
+select top 20 * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:38:02]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [01CF9E24-1346-EFC5-630C-BD7E09794130, 295847E0-2E95-CABF-C0A0-2382EBA3E6E7, 2E763596-E915-B5D7-B5BA-583733FB15FA, 3D43D578-3F8A-67D5-5836-A21DE18F4C1E, 3E2F42A1-5447-47B5-0D2A-9FB2817F1A2A, 42492003-95C4-6C60-71DC-D944578E0AAB, 43E7E2DF-D27E-6307-B562-24948CDFF365, 4C9D50BC-91B2-6383-ABD6-A41147F9F53B, 61006856-09B1-4298-2862-6C462C1232B7, 7152206D-D8FE-E92A-777F-10CC14F39F3B, A31BDB2E-2D7B-8572-95A0-A14995E6193F, A88264FE-E690-9744-503F-C311B4034A7C, B7D0EE79-B47A-DC08-DF85-57092D0FB4AD, CAED6956-0A9D-9AB4-BC4B-0C31DAC6EB14, CDEFDA63-1C0F-AB15-58A1-396CF255C4D8, DF19AA30-B9B5-FA61-A4F8-F952FACC8008, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-06 15:38:02]
+select * from [tbl_company] where [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-06 15:38:02]
+select * from [user] where [user].[id] in (?, ?, ?, ?, ?, ?, ?) and [user].[deleted_at] is null [0F2B8AFD-ECD4-2AAB-3F5C-0FF770199AB9, 3C864450-0A88-258C-0188-A8CC6C591D04, 476101A1-4235-57D1-94BD-0C555F232A2C, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5DB6D806-5B68-29AF-498C-F910A79FCEF6, 80F0E5AD-87E5-561C-62CE-C7F3D13B4A93, 9F7B0E88-8BB3-4CEA-FB2C-37D90EE71979]
+
+[2023-11-06 15:38:02]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:38:02]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:38:02]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:38:02]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:38:02]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:38:02]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [94bcb417bb68dab27bc39afcc34bd4e0d1d4de747e7f55f61b3e41793e677056a019687c2b1b0309, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 15:38:02.533, 2023-11-06 15:38:02.533, 2024-11-06 15:38:02.533]
+
+[2023-11-06 15:38:02]
+select top 1 * from [oauth_access_tokens] where [id] = ? [94bcb417bb68dab27bc39afcc34bd4e0d1d4de747e7f55f61b3e41793e677056a019687c2b1b0309]
+
+[2023-11-06 15:38:02]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:38:02.559, 94bcb417bb68dab27bc39afcc34bd4e0d1d4de747e7f55f61b3e41793e677056a019687c2b1b0309]
+
+[2023-11-06 15:38:56]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:38:56]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-06 15:38:56]
+select * from [tbl_staff] where [is_delete] = ? [0]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:38:56]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:38:56]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:38:56]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:38:56]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:38:56]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [7f2f293dec5ca1548071f6b8dc473aa1e1c8294821030ea87390b6f22d34a1e3ab1754c9f8106d42, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 15:38:56.263, 2023-11-06 15:38:56.263, 2024-11-06 15:38:56.263]
+
+[2023-11-06 15:38:56]
+select top 1 * from [oauth_access_tokens] where [id] = ? [7f2f293dec5ca1548071f6b8dc473aa1e1c8294821030ea87390b6f22d34a1e3ab1754c9f8106d42]
+
+[2023-11-06 15:38:56]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:38:56.302, 7f2f293dec5ca1548071f6b8dc473aa1e1c8294821030ea87390b6f22d34a1e3ab1754c9f8106d42]
+
+[2023-11-06 15:38:56]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:38:56]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:38:56]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:38:56]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0]
+
+[2023-11-06 15:38:56]
+select * from [tbl_staff] where [tbl_staff].[id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?) [0969EEF2-D599-BDFB-3A8B-74FF2DB07779, 0FBE877F-48EA-405F-C94B-39A59999087B, 15E20EB0-9C53-8B93-D6E1-728C868011CB, 2855E626-AADE-ED61-F791-9C6511C8F0AC, 64871EB8-2BC7-8B2F-D0A1-B125633D660A, 8AC750D6-88B3-89C6-DD5B-A1095619A06C, C46F055B-D6E6-7754-6A7E-4EC6C4EAD633, D35AF2AC-24AD-7D0E-DED3-5763790E26D2, F023E78A-D4B3-B00A-0866-DA6BC67DB236, F6D7AEDD-5C29-F265-6346-FC9657FE6A4C]
+
+[2023-11-06 15:38:56]
+select * from [tbl_register_eat] where [tbl_register_eat].[id] in (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) and [tbl_register_eat].[deleted_at] is null [01CF9E24-1346-EFC5-630C-BD7E09794130, 295847E0-2E95-CABF-C0A0-2382EBA3E6E7, 2E763596-E915-B5D7-B5BA-583733FB15FA, 3D43D578-3F8A-67D5-5836-A21DE18F4C1E, 3E2F42A1-5447-47B5-0D2A-9FB2817F1A2A, 42492003-95C4-6C60-71DC-D944578E0AAB, 43E7E2DF-D27E-6307-B562-24948CDFF365, 4C9D50BC-91B2-6383-ABD6-A41147F9F53B, 61006856-09B1-4298-2862-6C462C1232B7, 7152206D-D8FE-E92A-777F-10CC14F39F3B, A31BDB2E-2D7B-8572-95A0-A14995E6193F, A88264FE-E690-9744-503F-C311B4034A7C, B7D0EE79-B47A-DC08-DF85-57092D0FB4AD, CAED6956-0A9D-9AB4-BC4B-0C31DAC6EB14, CDEFDA63-1C0F-AB15-58A1-396CF255C4D8, DF19AA30-B9B5-FA61-A4F8-F952FACC8008, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-06 15:38:56]
+select * from [tbl_company] where [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:56]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:57]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:58]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:38:59]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:00]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:01]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:01]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:01]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-06 15:39:35]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:39:35]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:39:35]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:39:35]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-06 15:39:35]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-06 15:39:35]
+select * from [tbl_staff] where [is_delete] = ? and [tbl_staff].[company_id] in (?, ?, ?, ?) and exists (select * from [tbl_register_eat_detail] where [tbl_staff].[id] = [tbl_register_eat_detail].[staff_id] and [eat_date] >= ? and [eat_date] <= ? and [is_delete] = ? and [tbl_register_eat_detail].[deleted_at] is null) order by [code] asc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 0]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [0969EEF2-D599-BDFB-3A8B-74FF2DB07779, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [0969EEF2-D599-BDFB-3A8B-74FF2DB07779, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [0969EEF2-D599-BDFB-3A8B-74FF2DB07779, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [0969EEF2-D599-BDFB-3A8B-74FF2DB07779, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [64871EB8-2BC7-8B2F-D0A1-B125633D660A, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [64871EB8-2BC7-8B2F-D0A1-B125633D660A, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [64871EB8-2BC7-8B2F-D0A1-B125633D660A, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [64871EB8-2BC7-8B2F-D0A1-B125633D660A, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [8AC750D6-88B3-89C6-DD5B-A1095619A06C, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [8AC750D6-88B3-89C6-DD5B-A1095619A06C, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [8AC750D6-88B3-89C6-DD5B-A1095619A06C, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [8AC750D6-88B3-89C6-DD5B-A1095619A06C, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:35]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [D35AF2AC-24AD-7D0E-DED3-5763790E26D2, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [D35AF2AC-24AD-7D0E-DED3-5763790E26D2, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [D35AF2AC-24AD-7D0E-DED3-5763790E26D2, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [D35AF2AC-24AD-7D0E-DED3-5763790E26D2, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [15E20EB0-9C53-8B93-D6E1-728C868011CB, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [15E20EB0-9C53-8B93-D6E1-728C868011CB, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [15E20EB0-9C53-8B93-D6E1-728C868011CB, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [15E20EB0-9C53-8B93-D6E1-728C868011CB, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [C46F055B-D6E6-7754-6A7E-4EC6C4EAD633, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [C46F055B-D6E6-7754-6A7E-4EC6C4EAD633, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [C46F055B-D6E6-7754-6A7E-4EC6C4EAD633, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [C46F055B-D6E6-7754-6A7E-4EC6C4EAD633, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [F6D7AEDD-5C29-F265-6346-FC9657FE6A4C, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [F6D7AEDD-5C29-F265-6346-FC9657FE6A4C, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [F6D7AEDD-5C29-F265-6346-FC9657FE6A4C, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [F6D7AEDD-5C29-F265-6346-FC9657FE6A4C, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [2855E626-AADE-ED61-F791-9C6511C8F0AC, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [2855E626-AADE-ED61-F791-9C6511C8F0AC, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [2855E626-AADE-ED61-F791-9C6511C8F0AC, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [2855E626-AADE-ED61-F791-9C6511C8F0AC, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:36]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [F023E78A-D4B3-B00A-0866-DA6BC67DB236, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:37]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [F023E78A-D4B3-B00A-0866-DA6BC67DB236, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:37]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [F023E78A-D4B3-B00A-0866-DA6BC67DB236, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:37]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [F023E78A-D4B3-B00A-0866-DA6BC67DB236, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [0FBE877F-48EA-405F-C94B-39A59999087B, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:37]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] <> ? and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [0FBE877F-48EA-405F-C94B-39A59999087B, 0, 1, 0, , 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:37]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [0FBE877F-48EA-405F-C94B-39A59999087B, 0, 0, 1, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:37]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[staff_id] = ? and [tbl_register_eat_detail].[staff_id] is not null and [is_delete] = ? and [is_use] = ? and [is_cancel] = ? and [time_date] is null and ([eat_date] >= ? and [eat_date] <= ?) and [tbl_register_eat_detail].[deleted_at] is null [0FBE877F-48EA-405F-C94B-39A59999087B, 0, 0, 0, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 * from [tbl_config] where [tbl_config].[id] = ? and [tbl_config].[deleted_at] is null [1]
+
+[2023-11-06 15:39:37]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:39:37]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:39:37]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:39:37]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:39:37]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:39:37]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [64980de3b6d32a9dd42171391bffaeae6fdb81562211260db54fb09c52a7f4cec5cae834d2ce6910, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 15:39:37.640, 2023-11-06 15:39:37.640, 2024-11-06 15:39:37.640]
+
+[2023-11-06 15:39:37]
+select top 1 * from [oauth_access_tokens] where [id] = ? [64980de3b6d32a9dd42171391bffaeae6fdb81562211260db54fb09c52a7f4cec5cae834d2ce6910]
+
+[2023-11-06 15:39:37]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:39:37.667, 64980de3b6d32a9dd42171391bffaeae6fdb81562211260db54fb09c52a7f4cec5cae834d2ce6910]
+
+[2023-11-06 15:39:42]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:39:42]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:39:42]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:39:42]
+select count(*) as aggregate from [tbl_warning_event] where ([is_delete] = ?) [0]
+
+[2023-11-06 15:39:42]
+select top 20 * from [tbl_warning_event] where ([is_delete] = ?) order by [created_at] desc [0]
+
+[2023-11-06 15:39:42]
+select * from [tbl_staff] where [is_delete] = ? and [tbl_staff].[id] in (?) [0, ]
+
+[2023-11-06 15:39:42]
+select * from [tbl_eat] where [is_delete] = ? and [tbl_eat].[id] in (?) and [tbl_eat].[deleted_at] is null [0, ]
+
+[2023-11-06 15:39:42]
+select * from [tbl_location_eat] where [is_delete] = ? and [tbl_location_eat].[id] in (?) [0, ]
+
+[2023-11-06 15:39:42]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?) and [tbl_company].[deleted_at] is null [0, ]
+
+[2023-11-06 15:39:42]
+select * from [tbl_warning_event] where ([is_delete] = ?) order by [created_at] desc [0]
+
+[2023-11-06 15:39:42]
+select * from [tbl_staff] where [is_delete] = ? and [tbl_staff].[id] in (?) [0, ]
+
+[2023-11-06 15:39:42]
+select * from [tbl_eat] where [is_delete] = ? and [tbl_eat].[id] in (?) and [tbl_eat].[deleted_at] is null [0, ]
+
+[2023-11-06 15:39:42]
+select * from [tbl_location_eat] where [is_delete] = ? and [tbl_location_eat].[id] in (?) [0, ]
+
+[2023-11-06 15:39:42]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?) and [tbl_company].[deleted_at] is null [0, ]
+
+[2023-11-06 15:39:43]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:39:43]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-06 15:39:43]
+select count(*) as aggregate from [tbl_eat] where ([is_delete] = ?) and [tbl_eat].[deleted_at] is null [0]
+
+[2023-11-06 15:39:43]
+select * from [tbl_eat] where ([is_delete] = ?) and [tbl_eat].[deleted_at] is null order by [created_at] desc [0]
+
+[2023-11-06 15:39:43]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 15:39:43]
+select count(*) as aggregate from [tbl_location_eat] where ([is_delete] = ?) [0]
+
+[2023-11-06 15:39:43]
+select * from [tbl_location_eat] where ([is_delete] = ?) order by [created_at] desc [0]
+
+[2023-11-06 15:39:43]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:39:43]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:39:43]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:39:43]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:39:43]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:39:43]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [d82c0449faab7528f90485729f6a1864e8f8df21d7da9b1c420659c5a1550bc70d1df3e5231f5617, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 15:39:43.199, 2023-11-06 15:39:43.199, 2024-11-06 15:39:43.199]
+
+[2023-11-06 15:39:43]
+select top 1 * from [oauth_access_tokens] where [id] = ? [d82c0449faab7528f90485729f6a1864e8f8df21d7da9b1c420659c5a1550bc70d1df3e5231f5617]
+
+[2023-11-06 15:39:43]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:39:43.226, d82c0449faab7528f90485729f6a1864e8f8df21d7da9b1c420659c5a1550bc70d1df3e5231f5617]
+
+[2023-11-06 15:40:13]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-06 15:40:13]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 15:40:13]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:40:13]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:40:13]
+select count(*) as aggregate from [user] where ([is_delete] = ? and [staff_id] is null) and [user].[deleted_at] is null [0]
+
+[2023-11-06 15:40:13]
+select top 20 * from [user] where ([is_delete] = ? and [staff_id] is null) and [user].[deleted_at] is null order by [created_at] desc [0]
+
+[2023-11-06 15:40:13]
+select * from [user] where ([is_delete] = ? and [staff_id] is null) and [user].[deleted_at] is null order by [created_at] desc [0]
+
+[2023-11-06 15:40:13]
+select * from [roles] where ([is_delete] = ? and [is_manager] = ?) order by [created_at] desc [0, 2]
+
+[2023-11-06 15:40:13]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [5B5DA3B8-4957-FECF-810D-B37B027851E9, App\Models\User]
+
+[2023-11-06 15:40:13]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [68DA4362-D1CB-970B-B7D9-35BF2F541299, App\Models\User]
+
+[2023-11-06 15:40:13]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 15:40:14]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 15:40:14]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 15:40:14]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 15:40:14]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:40:14]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 15:40:14]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [a515dfe932b618c3feb3a58d43886b8dd6b0ef490d1fdfa07d312264932d44e8cfda45437c7bcecd, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 15:40:14.133, 2023-11-06 15:40:14.133, 2024-11-06 15:40:14.133]
+
+[2023-11-06 15:40:14]
+select top 1 * from [oauth_access_tokens] where [id] = ? [a515dfe932b618c3feb3a58d43886b8dd6b0ef490d1fdfa07d312264932d44e8cfda45437c7bcecd]
+
+[2023-11-06 15:40:14]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 15:40:14.160, a515dfe932b618c3feb3a58d43886b8dd6b0ef490d1fdfa07d312264932d44e8cfda45437c7bcecd]
+
+[2023-11-06 16:36:30]
+select top 1 * from [user] where [user_name] = ? and [is_delete] = ? and [user].[deleted_at] is null [hoangduong, 0]
+
+[2023-11-06 16:36:31]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:36:33]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 16:36:33]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 16:36:33]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:36:33]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:36:33]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:36:33]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:36:33]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:36:33]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:36:33]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [9ca4ae9d4d6e07b73f248fc27b18b06c6a86a4a167fa041d461526f562761734285b7d63635dfd60, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 16:36:33.244, 2023-11-06 16:36:33.244, 2024-11-06 16:36:33.244]
+
+[2023-11-06 16:36:33]
+select top 1 * from [oauth_access_tokens] where [id] = ? [9ca4ae9d4d6e07b73f248fc27b18b06c6a86a4a167fa041d461526f562761734285b7d63635dfd60]
+
+[2023-11-06 16:36:33]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:36:33.272, 9ca4ae9d4d6e07b73f248fc27b18b06c6a86a4a167fa041d461526f562761734285b7d63635dfd60]
+
+[2023-11-06 16:36:52]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 16:36:52]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 16:36:52]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:36:52]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:36:52]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:36:52]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:36:52]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:36:52]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:36:52]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [34227aaee44f49b054546d5fcc8dc1351c0cc5de54a4d06731aaeb8a0d9ac7e8943d4df6c7fc0167, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 16:36:52.728, 2023-11-06 16:36:52.728, 2024-11-06 16:36:52.728]
+
+[2023-11-06 16:36:52]
+select top 1 * from [oauth_access_tokens] where [id] = ? [34227aaee44f49b054546d5fcc8dc1351c0cc5de54a4d06731aaeb8a0d9ac7e8943d4df6c7fc0167]
+
+[2023-11-06 16:36:52]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:36:52.759, 34227aaee44f49b054546d5fcc8dc1351c0cc5de54a4d06731aaeb8a0d9ac7e8943d4df6c7fc0167]
+
+[2023-11-06 16:36:54]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 16:36:54]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 16:36:54]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:36:54]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:36:54]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:36:54]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:36:54]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:36:54]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:36:54]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [330f0e1b1c81aa512b90752c34527784a367e919d2d74169c2ba3da0a0f3c51affa6622beee30431, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 16:36:54.377, 2023-11-06 16:36:54.377, 2024-11-06 16:36:54.377]
+
+[2023-11-06 16:36:54]
+select top 1 * from [oauth_access_tokens] where [id] = ? [330f0e1b1c81aa512b90752c34527784a367e919d2d74169c2ba3da0a0f3c51affa6622beee30431]
+
+[2023-11-06 16:36:54]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:36:54.406, 330f0e1b1c81aa512b90752c34527784a367e919d2d74169c2ba3da0a0f3c51affa6622beee30431]
+
+[2023-11-06 16:37:50]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 16:37:50]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 16:37:50]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:37:50]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:37:50]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:37:50]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:37:50]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:37:50]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:37:50]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [f93c25a36745c80b907fb65e06a88ba1fb146f791057b1249fd474935bb54274ccdbfbfd3c16d582, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 16:37:50.642, 2023-11-06 16:37:50.642, 2024-11-06 16:37:50.642]
+
+[2023-11-06 16:37:50]
+select top 1 * from [oauth_access_tokens] where [id] = ? [f93c25a36745c80b907fb65e06a88ba1fb146f791057b1249fd474935bb54274ccdbfbfd3c16d582]
+
+[2023-11-06 16:37:50]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:37:50.678, f93c25a36745c80b907fb65e06a88ba1fb146f791057b1249fd474935bb54274ccdbfbfd3c16d582]
+
+[2023-11-06 16:39:00]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 10]
+
+[2023-11-06 16:39:00]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?, ?, ?, ?, ?, ?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-10-03, 2023-10-04, 2023-10-26, 2023-10-27, 2023-10-28, 2023-10-29, 2023-10-30, 2023-10-31]
+
+[2023-11-06 16:39:00]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:00]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:39:00]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:39:00]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:39:00]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:00]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:00]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [9197d8a3d825383e3070949505ca48dce14a382c9e98dbd5ccfa777cdf8a5640e8bd73351468e907, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 16:39:00.196, 2023-11-06 16:39:00.196, 2024-11-06 16:39:00.196]
+
+[2023-11-06 16:39:00]
+select top 1 * from [oauth_access_tokens] where [id] = ? [9197d8a3d825383e3070949505ca48dce14a382c9e98dbd5ccfa777cdf8a5640e8bd73351468e907]
+
+[2023-11-06 16:39:00]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:39:00.225, 9197d8a3d825383e3070949505ca48dce14a382c9e98dbd5ccfa777cdf8a5640e8bd73351468e907]
+
+[2023-11-06 16:39:02]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 11]
+
+[2023-11-06 16:39:02]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-11-01, 2023-11-06]
+
+[2023-11-06 16:39:02]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:02]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:39:02]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:39:02]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:39:02]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:02]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:03]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 16:39:03.000, 2023-11-06 16:39:03.000, 2024-11-06 16:39:03.000]
+
+[2023-11-06 16:39:03]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:03]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:39:03.029, 5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:03]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:03]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:03]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:03]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:03]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:03]
+select top 1 * from [tbl_meal] where [is_delete] = ? and [tbl_meal].[id] = ? and [tbl_meal].[deleted_at] is null [0, 2AB1A0D5-E948-0F3E-4BA2-99856497A2A2]
+
+[2023-11-06 16:39:03]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:03]
+select * from [tbl_eat] where [tbl_eat].[is_delete] = ? and [tbl_eat].[id] in (?) and [tbl_eat].[deleted_at] is null [0, 19AF85AC-BB88-C0C0-178F-D65FFD9611F0]
+
+[2023-11-06 16:39:03]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:03]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:03]
+select * from [tbl_meal_comment] where [is_delete] = ? and [staff_id] = ? and [meal_id] = ? and [tbl_meal_comment].[deleted_at] is null [0, 476101A1-4235-57D1-94BD-0C555F232A2C, 2AB1A0D5-E948-0F3E-4BA2-99856497A2A2]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:05]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:05]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:05]
+select top 1 * from [tbl_meal] where [is_delete] = ? and [tbl_meal].[id] = ? and [tbl_meal].[deleted_at] is null [0, FEF3629F-4CA0-218A-962A-5021EA1DA052]
+
+[2023-11-06 16:39:05]
+select * from [tbl_meal_comment] where [is_delete] = ? and [staff_id] = ? and [meal_id] = ? and [tbl_meal_comment].[deleted_at] is null [0, 476101A1-4235-57D1-94BD-0C555F232A2C, FEF3629F-4CA0-218A-962A-5021EA1DA052]
+
+[2023-11-06 16:39:05]
+select * from [tbl_eat] where [tbl_eat].[is_delete] = ? and [tbl_eat].[id] in (?) and [tbl_eat].[deleted_at] is null [0, 0FE75A5E-F473-21AA-BE3F-A87F7A7C1377]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:05]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:05]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:05]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:05]
+select top 1 * from [tbl_meal] where [is_delete] = ? and [tbl_meal].[id] = ? and [tbl_meal].[deleted_at] is null [0, D375B3E8-4129-49BD-0352-2108B0B651F5]
+
+[2023-11-06 16:39:05]
+select * from [tbl_meal_comment] where [is_delete] = ? and [staff_id] = ? and [meal_id] = ? and [tbl_meal_comment].[deleted_at] is null [0, 476101A1-4235-57D1-94BD-0C555F232A2C, D375B3E8-4129-49BD-0352-2108B0B651F5]
+
+[2023-11-06 16:39:05]
+select * from [tbl_eat] where [tbl_eat].[is_delete] = ? and [tbl_eat].[id] in (?) and [tbl_eat].[deleted_at] is null [0, 14C85DBC-F648-884F-4323-48AFB4BC061C]
+
+[2023-11-06 16:39:06]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:06]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:06]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:06]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:06]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:06]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:06]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:06]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5790c0f4f31d3db72653291dec2916ce293643f3739e7b4358185c12f11522d8b4bbe2d644e2c59c]
+
+[2023-11-06 16:39:06]
+select top 1 * from [tbl_meal] where [is_delete] = ? and [tbl_meal].[id] = ? and [tbl_meal].[deleted_at] is null [0, 2E9E9BAF-F835-C54D-DBF1-A3EEC9F06D3A]
+
+[2023-11-06 16:39:06]
+select * from [tbl_meal_comment] where [is_delete] = ? and [staff_id] = ? and [meal_id] = ? and [tbl_meal_comment].[deleted_at] is null [0, 476101A1-4235-57D1-94BD-0C555F232A2C, 2E9E9BAF-F835-C54D-DBF1-A3EEC9F06D3A]
+
+[2023-11-06 16:39:06]
+select * from [tbl_eat] where [tbl_eat].[is_delete] = ? and [tbl_eat].[id] in (?) and [tbl_eat].[deleted_at] is null [0, 1509960C-6E2D-9B1A-6C2B-6712DA68F8B1]
+
+[2023-11-06 16:39:08]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 10]
+
+[2023-11-06 16:39:08]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?, ?, ?, ?, ?, ?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-10-03, 2023-10-04, 2023-10-26, 2023-10-27, 2023-10-28, 2023-10-29, 2023-10-30, 2023-10-31]
+
+[2023-11-06 16:39:08]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:08]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:39:08]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:39:08]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:39:08]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:08]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:08]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [5fe7ce2668a75361f795779271a3afbf574519a192c880e1200bc50839a9cfe417b9b7a9c26b14fb, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 16:39:08.782, 2023-11-06 16:39:08.782, 2024-11-06 16:39:08.782]
+
+[2023-11-06 16:39:08]
+select top 1 * from [oauth_access_tokens] where [id] = ? [5fe7ce2668a75361f795779271a3afbf574519a192c880e1200bc50839a9cfe417b9b7a9c26b14fb]
+
+[2023-11-06 16:39:08]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:39:08.811, 5fe7ce2668a75361f795779271a3afbf574519a192c880e1200bc50839a9cfe417b9b7a9c26b14fb]
+
+[2023-11-06 16:39:12]
+select [eat_date] from [tbl_meal] where [is_delete] = ? and month([eat_date]) = ? and [tbl_meal].[deleted_at] is null group by [eat_date] order by DAY(eat_date) [0, 10]
+
+[2023-11-06 16:39:12]
+select * from [tbl_meal] where [tbl_meal].[is_delete] = ? and [tbl_meal].[eat_date] in (?, ?, ?, ?, ?, ?, ?, ?) and [tbl_meal].[deleted_at] is null order by [tbl_meal].[time_config_id] asc [0, 2023-10-03, 2023-10-04, 2023-10-26, 2023-10-27, 2023-10-28, 2023-10-29, 2023-10-30, 2023-10-31]
+
+[2023-11-06 16:39:12]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:39:12]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:39:12]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:39:12]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:39:12]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:12]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:39:12]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [b73570343bead2663546cbabe8615a09133891b77c3c3e3ed8902710ba958652e55141d6b8d3f879, 476101A1-4235-57D1-94BD-0C555F232A2C, 5, [], , 2023-11-06 16:39:12.201, 2023-11-06 16:39:12.201, 2024-11-06 16:39:12.201]
+
+[2023-11-06 16:39:12]
+select top 1 * from [oauth_access_tokens] where [id] = ? [b73570343bead2663546cbabe8615a09133891b77c3c3e3ed8902710ba958652e55141d6b8d3f879]
+
+[2023-11-06 16:39:12]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:39:12.230, b73570343bead2663546cbabe8615a09133891b77c3c3e3ed8902710ba958652e55141d6b8d3f879]
+
+[2023-11-06 16:59:06]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:59:11]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [476101A1-4235-57D1-94BD-0C555F232A2C]
+
+[2023-11-06 16:59:11]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-06 16:59:16]
+select * from [tbl_location_eat] where [is_delete] = ? [0]
+
+[2023-11-06 16:59:16]
+select top 1 * from [user] where [user_name] = ? and [is_delete] = ? and [user].[deleted_at] is null [admin, 0]
+
+[2023-11-06 16:59:16]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 16:59:16]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[deleted_at] is null [0]
+
+[2023-11-06 16:59:16]
+select * from [tbl_staff] where ([is_delete] = ? and [company_id] in (?, ?, ?, ?)) order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 16:59:16]
+select * from [tbl_company] where [is_delete] = ? and [tbl_company].[id] in (?, ?) and [tbl_company].[deleted_at] is null [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, FDBB4C71-127C-E812-AC44-4E32D8265EC4]
+
+[2023-11-06 16:59:16]
+select * from [tbl_staff] where [is_delete] = ? [0]
+
+[2023-11-06 16:59:16]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [created_at] >= ? and [created_at] <= ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 16:59:16]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [42492003-95C4-6C60-71DC-D944578E0AAB, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-06 16:59:16]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [eat_date] >= ? and [eat_date] <= ? and exists (select * from [tbl_staff] where [tbl_register_eat_detail].[staff_id] = [tbl_staff].[id] and [company_id] in (?, ?, ?, ?)) and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 16:59:16]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 16:59:16]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 16:59:16]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 16:59:16]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:59:16]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 16:59:16]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [670cfe2b6bb296fc27509639b019d7836106e2262ee1cfaaa19c1c1590c3b3007a40df239543a134, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 16:59:16.583, 2023-11-06 16:59:16.583, 2024-11-06 16:59:16.583]
+
+[2023-11-06 16:59:16]
+select top 1 * from [oauth_access_tokens] where [id] = ? [670cfe2b6bb296fc27509639b019d7836106e2262ee1cfaaa19c1c1590c3b3007a40df239543a134]
+
+[2023-11-06 16:59:16]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 16:59:16.608, 670cfe2b6bb296fc27509639b019d7836106e2262ee1cfaaa19c1c1590c3b3007a40df239543a134]
+
+[2023-11-06 16:59:16]
+select * from [permissions] []
+
+[2023-11-06 16:59:16]
+select [roles].*, [role_has_permissions].[permission_id] as [pivot_permission_id], [role_has_permissions].[role_id] as [pivot_role_id] from [roles] inner join [role_has_permissions] on [roles].[id] = [role_has_permissions].[role_id] where [role_has_permissions].[permission_id] in (507, 508, 509, 510, 511, 512, 513, 514, 515, 516, 517, 518, 519, 520, 521, 522, 523, 524, 525, 526, 527, 528, 529, 530, 531, 532, 533, 534, 535, 536, 537, 538, 539, 540, 541, 542, 543, 544, 545, 546, 547, 548) []
+
+[2023-11-06 16:59:16]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 16:59:16]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 16:59:17]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 16:59:17]
+select * from [tbl_register_eat_detail] where [is_delete] = ? and [eat_date] >= ? and [eat_date] <= ? and [is_use] = ? and exists (select * from [tbl_staff] where [tbl_register_eat_detail].[staff_id] = [tbl_staff].[id] and [company_id] in (?, ?, ?, ?)) and [tbl_register_eat_detail].[deleted_at] is null order by [eat_date] desc, [created_at] desc [0, 2023-11-01 00:00:00, 2023-11-30 23:59:59, 1, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 16:59:17]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [created_at] >= ? and [created_at] <= ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 16:59:17]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 16:59:17]
+select * from [tbl_company] where ([deleted_at] is null) and [id] in (?, ?, ?, ?) and [tbl_company].[deleted_at] is null order by [created_at] desc [5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59]
+
+[2023-11-06 16:59:17]
+select * from [tbl_register_eat] where [is_delete] = ? and [company_id] in (?, ?, ?, ?) and [created_at] >= ? and [created_at] <= ? and [tbl_register_eat].[deleted_at] is null order by [created_at] desc [0, 5342EAB3-A977-BBBE-E6F1-6D925FB71073, F6F4A8D6-D1BF-EACF-B13E-1605851AD646, FDBB4C71-127C-E812-AC44-4E32D8265EC4, FFEBD061-FFC3-C3E8-170C-7602AD448D59, 2023-11-01 00:00:00, 2023-11-30 23:59:59]
+
+[2023-11-06 16:59:17]
+select * from [tbl_register_eat_detail] where [tbl_register_eat_detail].[register_eat_id] in (?, ?, ?) and [tbl_register_eat_detail].[deleted_at] is null [42492003-95C4-6C60-71DC-D944578E0AAB, DFA709F7-2CDA-E0B4-F298-26B800A7BC68, E33B7F96-EBC7-7EB3-1BDB-5139CB8B55B5]
+
+[2023-11-06 17:00:01]
+select * from [permissions] []
+
+[2023-11-06 17:00:01]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 17:00:01]
+select count(*) as aggregate from [roles] where ([is_delete] = ?) [0]
+
+[2023-11-06 17:00:01]
+select top 20 * from [roles] where ([is_delete] = ?) order by [created_at] desc [0]
+
+[2023-11-06 17:00:01]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 17:00:01]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 17:00:01]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 17:00:01]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 17:00:01]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 17:00:01]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 17:00:01]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 17:00:01]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [d0e8650a0e3e2c5b8d2621934acbd8c9ebbe2058120bc0652dbb085bdf6c255390de3686e840d462, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 17:00:01.418, 2023-11-06 17:00:01.418, 2024-11-06 17:00:01.418]
+
+[2023-11-06 17:00:01]
+select top 1 * from [oauth_access_tokens] where [id] = ? [d0e8650a0e3e2c5b8d2621934acbd8c9ebbe2058120bc0652dbb085bdf6c255390de3686e840d462]
+
+[2023-11-06 17:00:01]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 17:00:01.447, d0e8650a0e3e2c5b8d2621934acbd8c9ebbe2058120bc0652dbb085bdf6c255390de3686e840d462]
+
+[2023-11-06 17:00:03]
+select * from [permissions] []
+
+[2023-11-06 17:00:03]
+select top 1 * from [user] where [id] = ? and [user].[deleted_at] is null [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C]
+
+[2023-11-06 17:00:03]
+select top 1 * from [roles] where [is_delete] = ? and [roles].[id] = ? [0, 1]
+
+[2023-11-06 17:00:03]
+select count(*) as tong from roles where is_manager=1 and is_delete=0 []
+
+[2023-11-06 17:00:03]
+select count(*) as tong from roles where is_manager=0 and is_delete=0 []
+
+[2023-11-06 17:00:03]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [1, App\Models\Role]
+
+[2023-11-06 17:00:04]
+select top 1 1 [exists] from [oauth_personal_access_clients] []
+
+[2023-11-06 17:00:04]
+select top 1 * from [oauth_personal_access_clients] order by [id] desc []
+
+[2023-11-06 17:00:04]
+select top 1 * from [oauth_clients] where [oauth_clients].[id] = ? [5]
+
+[2023-11-06 17:00:04]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 17:00:04]
+select top 1 * from [oauth_clients] where [id] = ? [5]
+
+[2023-11-06 17:00:04]
+insert into [oauth_access_tokens] ([id], [user_id], [client_id], [scopes], [revoked], [created_at], [updated_at], [expires_at]) values (?, ?, ?, ?, ?, ?, ?, ?) [82aa0056c2428b5fd608238a88c85ccf67883611120a973dfbb989232117b439d4c8aed2564a29d9, 50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, 5, [], , 2023-11-06 17:00:04.063, 2023-11-06 17:00:04.063, 2024-11-06 17:00:04.063]
+
+[2023-11-06 17:00:04]
+select top 1 * from [oauth_access_tokens] where [id] = ? [82aa0056c2428b5fd608238a88c85ccf67883611120a973dfbb989232117b439d4c8aed2564a29d9]
+
+[2023-11-06 17:00:04]
+update [oauth_access_tokens] set [name] = ?, [oauth_access_tokens].[updated_at] = ? where [id] = ? [lotte-kitchen, 2023-11-06 17:00:04.091, 82aa0056c2428b5fd608238a88c85ccf67883611120a973dfbb989232117b439d4c8aed2564a29d9]
+
+[2023-11-06 17:00:04]
+select [permissions].*, [model_has_permissions].[model_id] as [pivot_model_id], [model_has_permissions].[permission_id] as [pivot_permission_id], [model_has_permissions].[model_type] as [pivot_model_type] from [permissions] inner join [model_has_permissions] on [permissions].[id] = [model_has_permissions].[permission_id] where [model_has_permissions].[model_id] = ? and [model_has_permissions].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+
+[2023-11-06 17:00:04]
+select [roles].*, [model_has_roles].[model_id] as [pivot_model_id], [model_has_roles].[role_id] as [pivot_role_id], [model_has_roles].[model_type] as [pivot_model_type] from [roles] inner join [model_has_roles] on [roles].[id] = [model_has_roles].[role_id] where [model_has_roles].[model_id] in (?) and [model_has_roles].[model_type] = ? [50A12EF8-CB9D-0ECD-FAD9-E3BA67DDB89C, App\Models\User]
+

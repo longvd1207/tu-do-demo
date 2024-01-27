@@ -1,0 +1,126 @@
+
+/*========================================================== Loading =================================================*/
+body {
+    background: #ececec;
+}
+/*Hidden class for adding and removing*/
+.lds-dual-ring.hidden {
+    display: none;
+}
+
+/*Add an overlay to the entire page blocking any further presses to buttons or other elements.*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,.8);
+    z-index: 999;
+    opacity: 1;
+    transition: all 0.5s;
+}
+
+/*Spinner Styles*/
+.lds-dual-ring {
+    display: inline-block;
+    /*width: 80px;*/
+    /*height: 80px;*/
+}
+.lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 25% 50%;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.choices__list{
+    z-index: 2;
+}
+/* ======================================== Page ======================================================================*/
+@media (min-width: 768px) {
+    [data-layout=vertical][data-sidebar-size=sm] {
+        min-height: 80vh;
+    }
+}
+.page-content {
+    font-size: 13px;
+    padding: calc(48px + 1.5rem)  0 60px calc(1.5rem / 2);
+    width: 98%;
+    margin-right: 0;
+}
+#athlete-setup-list {
+    max-height: calc(100vh - 430px - 33px);
+    width: 100%;
+    overflow-y: auto;
+}
+#athlete-list{
+    max-height: calc(100vh - 430px);
+    width: 100%;
+    overflow-y: auto;
+}
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px white;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #ced4da;
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #ced4da;
+}
+.satisfy-item {
+    background-color: rgba(156, 196, 245, 0.73) !important;
+}
+tr {
+    padding: 0 !important;
+}
+#table-left {
+    max-height: calc(100vh - 400px);
+    width: 100%;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+#table-right {
+    max-height: calc(100vh - 384px);
+    width: 100%;
+    overflow-y: auto;
+    margin: 0 auto;
+}
+.table thead {
+    position: sticky;
+    top: -2px;
+    left: 5px;
+    z-index: 5;
+
+}
+td.td-header {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.hidden {
+    display: none;
+}

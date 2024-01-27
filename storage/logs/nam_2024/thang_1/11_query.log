@@ -1,0 +1,3 @@
+[2024-01-11 13:55:36]
+select * from [ticket_types] where [is_delete] = ? and [type] != ? and [ticket_types].[deleted_at] is null [0, 1]
+
