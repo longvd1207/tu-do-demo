@@ -1,9 +1,9 @@
 <?php
 
-use App\Http\Controllers\Admin\AreaController;
+use App\Http\Controllers\Admin\CabinetController;
 use App\Http\Controllers\Admin\CompanyController;
 use App\Http\Controllers\Admin\DeviceConfigController;
-use App\Http\Controllers\Admin\FunSpotController;
+use App\Http\Controllers\Admin\AreaController;
 use App\Http\Controllers\Admin\OrderController;
 use App\Http\Controllers\Admin\ServiceController;
 use App\Http\Controllers\Admin\TicketController;
@@ -20,8 +20,8 @@ Route::group(['middleware' => ['auth']], function () {
     // quản lý khu vực
 
     Route::resources([
+        'cabinet' => CabinetController::class,
         'area' => AreaController::class,
-        'fun-spot' => FunSpotController::class,
         'service' => ServiceController::class,
         'ticket' => TicketController::class,
         'type_ticket' => TypeTicketController::class,
@@ -35,8 +35,6 @@ Route::group(['middleware' => ['auth']], function () {
 
     Route::post('type_ticket/change-area', [TypeTicketController::class, 'changeDataByArea'])->name('type-ticket.change-area');
 
-    //Cường : lấy thông tin dịch vụ và điêm vui chơi từ khu vực
-    Route::get('area/get_service_fun_spot/{area_id}', [\App\Http\Controllers\Admin\AreaController::class, 'get_service_funspot_by_area'])->name('area.get_service_funspot_by_area');
 
     //tạo quyền bán vé
     Route::get('buy_ticket', [OrderController::class, 'create'])->name('buy_ticket.create');

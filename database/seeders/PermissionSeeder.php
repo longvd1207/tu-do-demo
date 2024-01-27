@@ -29,11 +29,11 @@ class PermissionSeeder extends Seeder
                 'update_role' => 'Cập nhật thông tin vai trò',
                 'delete_role' => 'Xóa vai trò'
             ],
-            'area' => [
-                'index_area' => 'Xem thông tin khu vực',
-                'create_area' => 'Thêm mới khu vực',
-                'update_area' => 'Cập nhật khu vực',
-                'delete_area' => 'Xóa thông tin khu vực'
+            'cabinet' => [
+                'index_cabinet' => 'Xem thông tin tủ đồ',
+                'create_cabinet' => 'Thêm mới tủ đồ',
+                'update_cabinet' => 'Cập nhật tủ đồ',
+                'delete_cabinet' => 'Xóa thông tin tủ đồ'
             ],
             'fun_spot' => [
                 'index_fun_spot' => 'Xem thông tin khu vui chơi',

@@ -4,25 +4,25 @@
 @endsection
 @section('content')
     @include('components.breadcrumb')
+    @include('multiselect.script')
     <div class="row">
         <div class="col">
-            <form action="{{ route('area.store') }}"
+            <form action="{{ route('fun-spot.store') }}"
                   enctype="multipart/form-data" method="post">
                 @csrf
 
                 <div class="card">
                     <div class="card-body border border-dashed border-start-0 border-end-0 row">
-
                         <!-- bên trái -->
                         <div class="col-6">
                             <div class="row mb-3">
 
                                 <div class="col-6">
                                     <div class="form_input">
-                                        <label class="form-label">Tên khu vực <span
+                                        <label class="form-label">Điểm vui chơi <span
                                                 style="color:red;font-size:15px;font-weight:bold">*</span></label>
                                         <input class="form-control" name="name" type="text"
-                                               value="{{ old('name')}}" placeholder="Nhập tên khu vực..." required>
+                                               value="{{ old('name')}}" placeholder="Nhập điểm vui chơi..." required>
                                         @if ($errors->has('name'))
                                             <div class="bg-danger text-white text-center py-1">
                                                 <span>{{ $errors->first('name') }}</span>
@@ -47,24 +47,36 @@
                                     </div>
                                 </div>
 
+
+                                <div class="col-6 mb-2 ">
+                                    <div class="input-group">
+                                        <div class="input-group-text bg-primary text-white">Khu vực</div>
+                                        <select class="form-select" name="area_id" id="search_area_id" required>
+                                            <option value="">--Chọn khu vực--</option>
+                                            @foreach ($areas as $item)
+                                                <option value="{{ $item['id'] }}" id="area_id_{{ $item['id'] }}">
+                                                    {{ $item['name'] }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+
                                 @if(!companyIdByUser())
-                                    <div class="col-6">
-                                        <div class="form_input">
-                                            <label class="form-label">Công ty </label>
-                                            <select name="company_id" class="form-control">
+                                    <div class="col-6 mb-2 ">
+                                        <div class="input-group">
+                                            <div class="input-group-text bg-primary text-white">Công ty</div>
+                                            <select class="form-select" name="area_id" id="search_area_id" required>
                                                 <option value="">--Chọn công ty--</option>
-                                                @foreach($allCompany as $company)
-                                                    <option value="{{ $company->id }}">{{ $company->name }}</option>
+                                                @foreach ($allCompany as $company)
+                                                    <option value="{{ $company->id }}">
+                                                        {{ $company->name }}</option>
                                                 @endforeach
                                             </select>
-                                            @if ($errors->has('company_id'))
-                                                <div class="bg-danger text-white text-center py-1">
-                                                    <span>{{ $errors->first('company_id') }}</span>
-                                                </div>
-                                            @endif
                                         </div>
                                     </div>
                                 @endif
+
+
 
                                 <div class="col-12">
                                     <div class="form_input">
@@ -82,13 +94,9 @@
                             </div>
 
                         </div>
+                        <!-- bên trái -->
                     </div>
-                    <!-- bên trái -->
 
-                    <!-- bên phải -->
-                    <div class="col-6">
-                    </div>
-                    <!-- bên phải -->
                 </div>
 
                 <div class="card-footer">
@@ -123,7 +131,36 @@
                 margin-top: 10px;
                 margin-bottom: 16px;
             }
+
+            .custom-select {
+                display: inline-block;
+                width: 100%;
+                height: calc(1.5em + 0.75rem + 2px);
+                padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+                font-size: 1rem;
+                font-weight: 400;
+                line-height: 1.5;
+                color: #495057;
+                vertical-align: middle;
+                background: #fff;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+            }
         </style>
+        <script>
+            setTimeout(() => {
+                $('#search_area_id').multiselect({
+                    includeSelectAllOption: true,
+                    enableFiltering: true,
+                    buttonContainer: '<div class="btn-group w-100 h-100" style="font-size: 13px"/>',
+                    enableCaseInsensitiveFiltering: true,
+                });
+            }, 220)
+
+        </script>
         @section('script')
             <script>
                 @if (!empty(session('alert-error')))
@@ -133,8 +170,8 @@
                     title: "{{ session('alert-error') }}",
                     showConfirmButton: false,
                     timer: 1500,
-                    showCloseButton: false,
-                })
+                    showCloseButton: false
+                });
                 @endif
 
                 @if (!empty(session('alert-success')))
@@ -144,55 +181,7 @@
                     title: "{{ session('alert-success') }}",
                     showConfirmButton: false,
                     timer: 1500,
-                    showCloseButton: false,
-                })
-                @endif
-            </script>
-
-            <!-- ======================================================= Xử lý ảnh =========================================== -->
-
-            <script>
-                function delete_image() {
-                    $('.image-container').remove()
-                    $('#delete_image_id').append('<input name="delete_image" type="hidden" value="1">')
-                }
-
-                //ẩn hiện vai trò theo type là web hay api
-                function showRoleBox() {
-                    var key = $('select[name=type]').val()
-                    // console.log($('#type').val());
-                    if (key != 1) {
-                        //=2 là api => ẩn vai trò
-                        $('#div_role').addClass('d-none')
-                        // $('#div_location').removeClass('d-none');
-                    } else {
-                        //=1 là web hiện vai trò lên
-                        $('#div_role').removeClass('d-none')
-                        // $('#div_location').addClass('d-none');
-
-                    }
-                }
-
-
-                $(document).ready(() => {
-                    //div hiển thị ảnh
-                    $('div.holder').hide()
-                    showRoleBox()
-
-                    //chọn ảnh
-                    $('#photo').change(function() {
-                        const file = this.files[0]
-                        if (file) {
-                            $('div.holder').show()
-                            let reader = new FileReader()
-                            reader.onload = function(event) {
-                                $('#imgPreview').attr('src', event.target.result)
-                            }
-                            reader.readAsDataURL(file)
-                        }
-                    })
-                })
-            </script>
-
-            <!-- ================================================xử lý ảnh ======================================= -->
+                    showCloseButton: false
+                });
+    @endif
 @endsection
