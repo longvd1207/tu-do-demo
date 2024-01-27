@@ -13,7 +13,7 @@
                     height="22">
             </span>
             <span class="logo-lg">
-                <img src="{{ url('images/logo_bao_son.png') }}" alt="" style="width: 90%;">
+                <img src="http://kztek.net/Templates/kztech-04062018-1/images/logo.png" alt="" style="width: 90%;">
             </span>
         </a>
         <button type="button" class="btn btn-sm p-0 fs-20 header-item float-end btn-vertical-sm-hover"

@@ -35,17 +35,17 @@
             <div class="card">
 
                 @can('export_event_report')
-                <div class="card-header">
-                    <form class="float-end" id="excel-form" action="{{ route('eventReport.exportExcel') }}" method="post">
-                        @csrf
-                        <button class="btn btn-success" id="excel-btn">Excel</button>
-                    </form>
-                </div>
+                    <div class="card-header">
+                        <form class="float-end" id="excel-form" action="{{ route('eventReport.exportExcel') }}" method="post">
+                            @csrf
+                            <button class="btn btn-success" id="excel-btn">Excel</button>
+                        </form>
+                    </div>
                 @endcan
 
                 <!-- tìm kiếm -->
 
-                <div class="card-body border border-dashed border-end-0 border-start-0">
+                {{-- <div class="card-body border border-dashed border-end-0 border-start-0">
                     <form action="{{ url('admin/eventReport/search') }}" method="post">
                         @csrf
                         <div class="row g-3 mb-0 align-items-center">
@@ -134,7 +134,7 @@
 
                         <!--end row-->
                     </form>
-                </div>
+                </div> --}}
                 <!-- tìm kiếm -->
 
                 <div style="padding:5px 15px" class="text-danger"><b>Trang {{ session('search.page') }} /
@@ -145,54 +145,34 @@
                         <thead class="table-light">
                             <tr class="text-center">
                                 <th scope="col">STT</th>
-                                <th scope="col">Mã hóa đơn</th>
-                                <th scope="col">Mã vé</th>
-                                <th scope="col">Loại vé</th>
                                 <th scope="col">Khu vực</th>
-                                <th scope="col">Dịch vụ</th>
-                                <th scope="col">Tên khách <i>(nếu có)</i></th>
-                                <th scope="col">Thời gian sử dụng</th>
+                                <th scope="col">Tủ</th>
+                                <th scope="col">Ngăn</th>
+                                <th scope="col">Loại ngăn</th>
+                                <th scope="col">Thời gian gửi</th>
+                                <th scope="col">Thời gian lấy</th>
+                                <th scope="col">Hình ảnh</th>
                             </tr>
                         </thead>
                         <tbody>
-                            @if (!empty($data))
-                                @foreach ($data as $key => $item)
-                                    <tr class="text-center">
-                                        <td>{{ $key + 1 }}</td>
-                                        <td><a href="{{ route('order.index', ['code_order' => $item->order->code_order ?? '', 'confirm_search' => 1]) }}"
-                                                class="fw-medium" target="_blank"><b>{{ $item->order->code_order ?? '' }}</b></a>
-                                        </td>
-                                        <td><a href="{{ route('ticket.index', ['code' => $item->ticket->code ?? '', 'confirm_search' => 1]) }}"
-                                                class="fw-medium" target="_blank"><b>{{ $item->ticket->code ?? '' }}</b></a>
-                                        </td>
-                                        <td>{{ $item->ticketType->name }}</td>
-                                        <td class="text-center">{{$item->getNameArea()}}
-
-{{--                                            @if ($item->type == 1)--}}
-{{--                                                <span class="badge badge-outline-success">Khu vực</span>--}}
-{{--                                            @elseif($item->type == 2)--}}
-{{--                                                <span class="badge badge-outline-info">Dịch vụ</span>--}}
-{{--                                            @else--}}
-{{--                                                <span class="badge badge-outline-dark"> Điểm vui chơi</span>--}}
-{{--                                            @endif--}}
-                                        </td>
-                                        <td>{{ $item->type_name }}</td>
-                                        <td>
-
-                                            @if( @$item->order->customer->id != "" )
-
-                                                <a  title="Người mua vé"
-                                                   onclick="xem_nhan_vien('{{@$item->order->customer->name}}', '{{@$item->order->customer->phone}}', '{{@$item->order->customer->email}}', '{{@$item->order->customer->address}}')"  style="color: #3d78e3">
-                                                    <b>{{ @$item->order->customer->name }}</b>
-                                                </a>
-                                            @endif
-
-
-                                        </td>
-                                        <td>{{ date('H:i d-m-Y', strtotime($item->time_in)) }}</td>
-                                    </tr>
-                                @endforeach
-                            @endif
+                            @for ($i = 1; $i < 21; $i++)
+                                <tr class="text-center">
+                                    <td>{{ $i }}</td>
+                                    <td>Khu vực {{ $i }}</td>
+                                    <td>Tủ {{ $i }}</td>
+                                    <td>Ngăn {{ $i }}</td>
+                                    <td>
+                                        <span class="badge bg-success">Ngăn vừa</span>
+                                    </td>
+                                    <td>{{ date('H:i d-m-Y') }}</td>
+                                    <td>{{ date('H:i d-m-Y') }}</td>
+                                    <td>
+                                        <img style="width:100px"
+                                            src="https://www.jollyboxdesign.com/wp-content/uploads/2021/08/Administrator.png"
+                                            alt="">
+                                    </td>
+                                </tr>
+                            @endfor
                         </tbody>
                     </table>
                 </div>
@@ -204,47 +184,47 @@
     </div>
 
     <!-- gọi đến các model -->
-    @include('admin.warning_event.include.modal')
+    {{-- @include('admin.warning_event.include.modal') --}}
 @endsection
 
 
 @section('script')
     <script>
         @if (!empty(session('alert-success')))
-        // sweetSuccess('{{ session('alert-success') }}');
-        Swal.fire({
-            position: 'top-end',
-            icon: 'success',
-            title: "{{ session('alert-success') }}",
-            showConfirmButton: false,
-            timer: 1500,
-            showCloseButton: false
-        });
+            // sweetSuccess('{{ session('alert-success') }}');
+            Swal.fire({
+                position: 'top-end',
+                icon: 'success',
+                title: "{{ session('alert-success') }}",
+                showConfirmButton: false,
+                timer: 1500,
+                showCloseButton: false
+            });
         @endif
 
         @if (!empty(session('alert-error')))
-        Swal.fire({
-            position: 'top-end',
-            icon: 'error',
-            title: "{{ session('alert-error') }}",
-            showConfirmButton: false,
-            timer: 1500,
-            showCloseButton: false
-        });
+            Swal.fire({
+                position: 'top-end',
+                icon: 'error',
+                title: "{{ session('alert-error') }}",
+                showConfirmButton: false,
+                timer: 1500,
+                showCloseButton: false
+            });
         @endif
 
         //nếu có lỗi import file excel nhân viên
         @if (!empty(session('import-error')))
-        showErrorImport();
+            showErrorImport();
         @endif
 
         //nếu có lỗi import file zip ảnh
         @if (!empty(session('import-file-zip-error')))
-        showErrorImportFileZipImage();
+            showErrorImportFileZipImage();
         @endif
 
-        $(document).ready(function () {
-            $('.submitForm').on('click', function (e) {
+        $(document).ready(function() {
+            $('.submitForm').on('click', function(e) {
                 e.preventDefault();
                 var form = $(this).parents('form');
                 Swal.fire({
@@ -427,8 +407,8 @@
             $.ajax({
                 type: "GET",
                 data: {},
-                url: "{{ url('')}}" + "/admin/area/get_service_fun_spot/" + area_id,
-                success: function (responseData) {
+                url: "{{ url('') }}" + "/admin/area/get_service_fun_spot/" + area_id,
+                success: function(responseData) {
 
                     if (responseData['status'] == 200) {
 
@@ -469,7 +449,5 @@
             });
 
         }
-
     </script>
-
 @endsection

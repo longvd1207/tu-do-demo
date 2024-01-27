@@ -1,50 +1,32 @@
-<div class="row" style="background-color: #fff;border-top-left-radius: 15px;
-border-top-right-radius: 15px;">
-    <div class="col-sm-9" style="margin-top: 16px; margin-bottom: 16px;">
-        <h4 class="card-title mb-0 flex-grow-1">Thống kê: <b class="text-danger text_date"></b><br>
-            Tổng doanh thu: <b class="text-danger" id="total_order"></b>
-        </h4>
-    </div>
-    <div class="col-sm-3" style="margin-top: 16px;
-    margin-bottom: 16px;">
-        <div style="float: right" class="input-group">
-            <div class="input-group-text bg-primary text-white">Chọn tháng</div>
-            <input class="form-control" id="month_home" name="month" type="month" value="{{ date('Y-m') }}"
-                onchange="choseMonth()">
-        </div>
-    </div>
-</div>
-
-
 <div class="row" style="background-color: #fff;">
     <div class="col-xl-8">
         <div class="card">
             <div class="card-header border-0 align-items-center d-flex" style="background-color: #405189;">
-                <h4 class="card-title mb-0 flex-grow-1" style="color: #fff">Thống kê lượt mua vé
+                <h4 class="card-title mb-0 flex-grow-1" style="color: #fff">Thống kê lượt sử dụng
                     {{-- Tổng doanh thu: <b class="text-danger" id="total_order"></b> --}}
                 </h4>
 
             </div><!-- end card header -->
+            <div class="card-header">
 
-            <div class="card-header p-0 border-0 bg-soft-light">
-                <div class="row g-0 text-center">
-                    <div class="col-6 col-sm-6">
-                        <div class="p-3 border border-dashed border-start-0">
-                            <h5 class="mb-1"><span class="counter-value" data-target="7585"
-                                    id="registerEat_total">0</span></h5>
-                            <p class="text-muted mb-0">Thanh toán Offline</p>
-                        </div>
+                <div class="row"
+                    style="background-color: #fff;border-top-left-radius: 15px;
+border-top-right-radius: 15px;">
+                    <div class="col-sm-8" style="margin-top: 16px; margin-bottom: 16px;">
+                        <h4 class="card-title mb-0 flex-grow-1">Thống kê: <b class="text-danger text_date"></b><br>
+                            Lượt sử dụng: <b class="text-danger" id="total_order"></b>
+                        </h4>
                     </div>
-                    <!--end col-->
-                    <div class="col-6 col-sm-6">
-                        <div class="p-3 border border-dashed border-start-0">
-                            <h5 class="mb-1"><span class="counter-value" data-target="7585"
-                                    id="staffEat_total">0</span></h5>
-                            <p class="text-muted mb-0">Thanh toán Online</p>
+                    <div class="col-sm-4" style="margin-top: 16px;
+margin-bottom: 16px;">
+                        <div style="float: right" class="input-group">
+                            <div class="input-group-text bg-primary text-white">Chọn tháng</div>
+                            <input class="form-control" id="month_home" name="month" type="month"
+                                value="{{ date('Y-m') }}" onchange="choseMonth()">
                         </div>
                     </div>
                 </div>
-            </div><!-- end card header -->
+            </div>
 
             <div class="card-body p-0 pb-2">
                 <div class="w-100">
@@ -54,22 +36,59 @@ border-top-right-radius: 15px;">
             </div><!-- end card body -->
         </div><!-- end card -->
     </div><!-- end col -->
-    <div class="col-xl-4">
-        <div class="card card-height-100">
-            <div class="card-header align-items-center d-flex" style="background-color: #3577f1;">
-                <h4 class="card-title mb-0 flex-grow-1" style="color: #fff">Thống kê lượt mua vé</h4>
 
+    <div class="col-xl-4" style="padding-left:5px;">
+        <div class="card card-height-100">
+            <div class="card-header align-items-center d-flex" style="background-color: #29badb;">
+                <h4 class="card-title mb-0 flex-grow-1" style="color: #fff">Danh sách thiết bị</h4>
             </div><!-- end card header -->
 
             <div class="card-body">
-                <div id="store-visits-source"
-                    data-colors='["--vz-danger","--vz-primary", "--vz-success",  "--vz-info", "--vz-warning","--vz-secondary"]'
-                    class="apex-charts" dir="ltr">
+                <div class="table-responsive table-card">
+                    <table class="table table-hover table-centered align-middle table-nowrap mb-0">
+                        <tbody>
+                            @for ($i = 1; $i < 6; $i++)
+                                <tr>
+                                    <td style="text-align: letf">
+                                        Khu vực {{ $i }}
+                                    </td>
+                                    <td style="text-align: letf">
+                                        Tủ {{ $i }}
+                                    </td>
+                                    <td style="text-align: center">
+                                        <span class="badge badge-soft-danger text-uppercase" title=""><i
+                                                class="ri-run-line"></i>
+                                            0/0</span>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <span class="badge bg-danger"><i class="ri-cloud-off-fill"></i> Bảo trì</span>
+                                    </td>
+                                </tr>
+                            @endfor
+                            @for ($i = 6; $i < 12; $i++)
+                                <tr>
+                                    <td style="text-align: letf">
+                                        Khu vực {{ $i }}
+                                    </td>
+                                    <td style="text-align: letf">
+                                        Tủ {{ $i }}
+                                    </td>
+                                    <td style="text-align: center">
+                                        <span class="badge badge-soft-success text-uppercase" title=""><i
+                                                class="ri-run-line"></i>
+                                            30/60</span>
+                                    </td>
+                                    <td style="text-align: center">
+                                        <span class="badge bg-success"><i class="ri-cloud-off-fill"></i> Hoạt động</span>
+                                    </td>
+                                </tr>
+                            @endfor
+                        </tbody>
+                    </table>
                 </div>
             </div>
-        </div> <!-- .card-->
-
-    </div> <!-- .col-->
+        </div>
+    </div>
 </div> <!-- end row-->
 
 <style>
@@ -211,7 +230,7 @@ border-top-right-radius: 15px;">
 
     function column_graph(data) {
         var offline = [];
-        var online = [];
+        // var online = [];
         var dayInMonth = [];
 
         var storeVisitsDiv = document.getElementById('customer_impression_charts');
@@ -224,30 +243,25 @@ border-top-right-radius: 15px;">
             dayInMonth.push(i);
         }
 
-        var total_online = 0;
-        for (var i in data.online) {
-            online.push(data.online[i]);
-            total_online = total_online + data.online[i];
-        }
-
-        $('#registerEat_total').text(main_layout.formattedNumber(total_offline) + ' đ');
-        $('#staffEat_total').text(main_layout.formattedNumber(total_online) + ' đ');
-        $('#total_order').text(main_layout.formattedNumber(total_online + total_offline) + ' đ');
-
+        // var total_online = 0;
+        // for (var i in data.online) {
+        //     online.push(data.online[i]);
+        //     total_online = total_online + data.online[i];
+        // }
 
         var linechartcustomerColors = getChartColorsArray("customer_impression_charts");
         if (linechartcustomerColors) {
             var options = {
                 series: [{
-                        name: "Offline",
+                        name: "Lượt sử dụng",
                         type: "area",
                         data: offline,
                     },
-                    {
-                        name: "Online",
-                        type: "bar",
-                        data: online,
-                    },
+                    // {
+                    //     name: "Online",
+                    //     type: "bar",
+                    //     data: online,
+                    // },
                     // {
                     //     name: "Refunds",
                     //     type: "line",

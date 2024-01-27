@@ -6,16 +6,16 @@
                 <div class="d-flex align-items-center">
                     <div class="flex-grow-1 overflow-hidden">
                         <p class="text-uppercase fw-bold text-white text-truncate mb-0">
-                            Tông doanh thu tháng</p>
+                            Khu vực</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-end justify-content-between mt-4">
                     <div>
                         <h4 class="fs-22 fw-bold ff-secondary text-white mb-4">
-                            {{ number_format($total, 0, '.', '.') . 'đ' }}
+                            10 khu vực
                             <span class="counter-value"></span>
                         </h4>
-                        <a style="color: #ffffff00" href="#" class="">Xem chi
+                        <a href="#" class="text-decoration-underline text-white">Xem chi
                             tiết</a>
                     </div>
                     <div class="avatar-sm flex-shrink-0">
@@ -36,13 +36,13 @@
                 <div class="d-flex align-items-center">
                     <div class="flex-grow-1 overflow-hidden">
                         <p class="text-uppercase fw-bold text-white text-truncate mb-0">
-                            Lượt mua vé thành công</p>
+                            Ngăn tủ hoạt động</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-end justify-content-between mt-4">
                     <div>
                         <h4 class="fs-22 fw-bold ff-secondary text-white mb-4">
-                            {{ $countOrder }} Lượt
+                            80/100 ngăn
                             <span class="counter-value" data-target="36894"></span>
                         </h4>
                         <a href="#" class="text-decoration-underline text-white">Xem chi
@@ -66,13 +66,14 @@
                 <div class="d-flex align-items-center">
                     <div class="flex-grow-1 overflow-hidden">
                         <p class="text-uppercase fw-bold text-white text-truncate mb-0">
-                            Số lượng vé bán ra</p>
+                            Ngăn tủ đang được sử dụng</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-end justify-content-between mt-4">
                     <div>
                         <h4 class="fs-22 fw-bold ff-secondary text-white mb-4">
-                            {{ $countTicket }} Vé<span class="counter-value"></span>
+                            50/80 ngăn
+                            <span class="counter-value"></span>
                         </h4>
                         <a href="#" class="text-decoration-underline text-white">Xem
                             chi tiết</a>
@@ -94,13 +95,13 @@
                 <div class="d-flex align-items-center">
                     <div class="flex-grow-1 overflow-hidden">
                         <p class="text-uppercase fw-bold text-white text-truncate mb-0">
-                            Số lượng hoạt động trên hệ thống</p>
+                            Lượt sử dung trong tháng</p>
                     </div>
                 </div>
                 <div class="d-flex align-items-end justify-content-between mt-4">
                     <div>
                         <h4 class="fs-22 fw-bold ff-secondary text-white mb-4">
-                            {{ $countTicketType }} Loại vé
+                            1000 lượt
                             <span class="counter-value"></span>
                         </h4>
                         <a href="3" class="text-decoration-underline text-white">Xem

@@ -49,7 +49,7 @@ class EventReportController extends Controller
                 'route' => 'home'
             ],
             [
-                'title' => 'Báo cáo sự kiện vào',
+                'title' => 'Báo cáo lượt sử dụng',
                 'route' => ''
             ]
         ];
