@@ -8,41 +8,17 @@ return [
             'Khu vực' => [
                 'route_group' => 'area', //sử dụng để active
                 'route' => 'area.index', //route để gắn link
+                'class' => 'ri-bubble-chart-line"', //class của icon
+                'permission' => 'index_area', //quyền của menu
+            ],
+
+            'Danh sách tủ đồ' => [
+                'route_group' => 'cabinet', //sử dụng để active
+                'route' => 'cabinet.index', //route để gắn link
                 'class' => 'ri-bard-fill', //class của icon
                 'permission' => 'index_area', //quyền của menu
             ],
 
-            //----------------------------------- KHU VỰC -----------------------------------------
-
-            'Điểm vui chơi' => [
-                'route_group' => 'fun-spot', //sử dụng để active
-                'route' => 'fun-spot.index', //route để gắn link
-                'class' => 'ri-bubble-chart-line"', //class của icon
-                'permission' => 'index_fun_spot', //quyền của menu
-            ],
-
-            //----------------------------------- Điểm vui chơi -----------------------------------------
-
-            'Dịch vụ' => [
-                'route_group' => 'service', //sử dụng để active
-                'route' => 'service.index', //route để gắn link
-                'class' => 'ri-bard-fill', //class của icon
-                'permission' => 'index_service', //quyền của menu
-            ],
-
-            'DS loại vé' => [
-                'route_group' => 'type_ticket', //sử dụng để active
-                'route' => 'type_ticket.index', //route để gắn link
-                'class' => 'ri-bard-fill', //class của icon
-                'permission' => 'index_ticket', //quyền của menu
-            ],
-
-            'Cấu hình thiết bị' => [
-                'route_group' => 'device', //sử dụng để active
-                'route' => 'device.index', //route để gắn link
-                'class' => 'ri-bard-fill', //class của icon
-                'permission' => 'index_device', //quyền của menu
-            ],
         ]
     ],
     //-----------------------------------DANH MỤC ------------------------------------------------
